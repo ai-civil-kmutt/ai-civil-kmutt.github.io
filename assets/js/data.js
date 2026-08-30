@@ -96,7 +96,7 @@ const PEOPLE = [
     division: 'Geotechnical Engineering',
     note: 'Associate Dean for Research, Faculty of Engineering',
     bio: 'Numerical methods in geomechanics, ground improvement, and tunnelling and underground construction. Recent work automates the estimation of tunnelling-induced ground stability and settlement.',
-    metric: '5,000+ citations',
+    metric: '5,400+ citations &middot; h-index 45',
     links: [
       { label: 'Scholar', url: 'https://scholar.google.com/citations?user=oaz_nvAAAAAJ' },
       { label: 'KIRIM', url: 'https://kirim.kmutt.ac.th/converis/portal/detail/Person/54115002?lang=en_GB' }
@@ -111,7 +111,7 @@ const PEOPLE = [
     division: 'Geotechnical Engineering',
     note: 'Head of Geotechnical Engineering Programme',
     bio: 'Geosynthetics, geotechnical instrumentation and physical modelling. Contributes the experimental backbone for the group&rsquo;s pavement, resistivity and reinforcement datasets.',
-    metric: '2,200+ citations',
+    metric: '2,500+ citations &middot; h-index 28',
     links: [
       { label: 'Scholar', url: 'https://scholar.google.com/citations?user=3ovvMlMAAAAJ' },
       { label: 'KIRIM', url: 'https://kirim.kmutt.ac.th/converis/portal/detail/Person/54212134?lang=en_GB' }
@@ -126,7 +126,7 @@ const PEOPLE = [
     division: 'Structural Engineering',
     note: 'Head, Institute for Scientific and Technological Research',
     bio: 'Seismic design, structural dynamics and earthquake engineering. Brings structural performance assessment into the group&rsquo;s liquefaction and hazard modelling work.',
-    metric: '1,100+ citations',
+    metric: '1,000+ citations &middot; h-index 17',
     links: [
       { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Sutat-Leelataviwat' },
       { label: 'KIRIM', url: 'https://kirim.kmutt.ac.th/converis/portal/detail/Person/54140039?lang=en_GB' }
@@ -155,7 +155,7 @@ const PEOPLE = [
     role: 'Principal Investigator',
     division: 'Geotechnical Engineering',
     bio: 'Ground improvement, pile-supported embankments, and tunnelling effects on adjacent structures. Leads the rubber-modified asphalt and pavement overlay studies.',
-    metric: 'Ground improvement &amp; pavement',
+    metric: '540+ citations &middot; h-index 12',
     links: [
       { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Chana-Phutthananon' }
     ]
@@ -169,7 +169,7 @@ const PEOPLE = [
     division: 'Water Resources Engineering',
     note: 'Head of Water Resources Engineering Programme',
     bio: 'Hydrological and hydraulic modelling, groundwater&ndash;surface water interaction and water resources management. Extends the group&rsquo;s machine learning methods to catchment-scale problems.',
-    metric: 'Hydrology &amp; water systems',
+    metric: '100+ citations &middot; h-index 6',
     links: [
       { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Chanchai-Petpongpan-2' }
     ]

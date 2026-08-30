@@ -70,6 +70,19 @@ automatically.
 The source portraits carry a KMUTT watermark in the top-left corner. The stylesheet
 zooms each image toward the face (`.ava img`) so the watermark sits outside the frame.
 
+## Citation metrics
+
+The `metric` field on each person in `data.js` carries their citation count and h-index.
+Six come from Google Scholar. Sutat Leelataviwat and Chanchai Petpongpan have no public
+Scholar profile, so their figures come from Semantic Scholar, which indexes fewer venues
+and therefore reports lower numbers. A note under the people grid states this.
+
+Kosit Jariyatatsakorn and Tipok Kitkobsin keep a topic label rather than a metric. Both
+are early career, and Semantic Scholar reports single-digit counts that say little.
+
+Counts were checked in August 2026 and drift upward over time. Re-check before a major
+update.
+
 ## Data sources
 
 Publications, citation counts, repositories and Spaces were collected in August 2026 from
