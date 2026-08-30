@@ -1,0 +1,359 @@
+/* ─────────────────────────────────────────────────────────────
+   AI Research Group — site content
+   Edit this file to update the site. No build step required.
+   ───────────────────────────────────────────────────────────── */
+
+const THEMES = [
+  {
+    id: 'sequence',
+    n: '01',
+    title: 'Transformers for geotechnical prediction',
+    body: 'Soil profiles are sequences. We encode borehole logs, seismic records and CPT traces as token streams and let attention models read them the way an engineer reads a log. The approach now covers bored pile load-deformation, liquefaction potential, rapid impact compaction and soil electrical resistivity.',
+    tags: ['Transformers', 'Sequence encoding', 'Site characterisation']
+  },
+  {
+    id: 'vision',
+    n: '02',
+    title: 'Computer vision for infrastructure inspection',
+    body: 'Detectors that survive contact with a real road survey. YOLO9tr and YOLO26-RD find pavement distress without non-maximum suppression. DINOv3-YOLOv12 pairs self-supervised features with a fast detector, so a few hundred labelled images are enough. Related work covers tunnel deformation, concrete cracks and railway obstruction.',
+    tags: ['Object detection', 'Self-supervised features', 'Pavement distress']
+  },
+  {
+    id: 'agentic',
+    n: '03',
+    title: 'Agentic AI and LLM systems for design',
+    body: 'Design is a workflow, not a single prediction. We build multi-agent systems where language models plan, call analysis tools, check codes of practice and produce a checked foundation design. The plaxisMCP server puts a finite-element package directly in reach of an agent.',
+    tags: ['Multi-agent systems', 'LLM tool use', 'Automated design']
+  },
+  {
+    id: 'pinn',
+    n: '04',
+    title: 'Physics-informed and scientific machine learning',
+    body: 'Where data is scarce, the governing equations are the data. We use Fourier-feature physics-informed neural networks for elasto-plastic analysis, and we assess honestly where PINNs and operator learning actually beat classical solvers in geotechnical practice.',
+    tags: ['PINNs', 'Operator learning', 'Constitutive modelling']
+  },
+  {
+    id: 'xai',
+    n: '05',
+    title: 'Explainable AI for engineering decisions',
+    body: 'A number an engineer cannot interrogate is a number they cannot sign off. We pair our predictive models with attribution analysis. That means SHAP, attention maps and dual-attention tabular architectures, so the physical drivers behind a prediction stay visible.',
+    tags: ['SHAP', 'Attention analysis', 'Model trust']
+  },
+  {
+    id: 'materials',
+    n: '06',
+    title: 'Materials and concrete informatics',
+    body: 'Long-term material behaviour is a time-series problem. A triple-attention transformer predicts time-dependent concrete creep. Parallel work targets alkali-activated binders, recycled aggregate and supplementary cementitious materials, run with the construction materials group.',
+    tags: ['Creep prediction', 'Sustainable binders', 'Time series']
+  },
+  {
+    id: 'geophysics',
+    n: '07',
+    title: 'Geophysics and non-destructive testing',
+    body: 'Faster ground models from surface measurements. We invert Rayleigh dispersion curves for shear-wave velocity profiles, predict critical pavement strains straight from falling weight deflectometer data without backcalculation, and fuse multi-view ground penetrating radar to find cavities.',
+    tags: ['MASW / SASW', 'FWD', 'GPR']
+  }
+];
+
+/* ── People ─────────────────────────────────────────────────── */
+
+const LEAD = {
+  name: 'Assoc. Prof. Dr. Sompote Youwai',
+  role: 'Principal Investigator &middot; Group Lead',
+  division: 'Geotechnical Engineering',
+  email: 'sompote.you@kmutt.ac.th',
+  phone: '+66 2470 9141',
+  bio: 'Sompote Youwai leads the group. His work moves along three connected paradigms: deep learning for prediction, computer vision for infrastructure monitoring, and agentic AI for design orchestration. Earlier work on rubber tyre&ndash;sand mixtures and reinforced embankments remains widely cited. He publishes the code and the weights for almost everything the group produces.',
+  metrics: [
+    { k: 'Citations', v: '1,943' },
+    { k: 'h-index', v: '19' },
+    { k: 'i10-index', v: '24' }
+  ],
+  links: [
+    { label: 'Google Scholar', url: 'https://scholar.google.com/citations?user=rAIcivQAAAAJ' },
+    { label: 'GitHub', url: 'https://github.com/Sompote' },
+    { label: 'Hugging Face', url: 'https://huggingface.co/Sompote' },
+    { label: 'ORCID', url: 'https://orcid.org/0009-0002-9878-8504' },
+    { label: 'KMUTT KIRIM', url: 'https://kirim.kmutt.ac.th/converis/portal/detail/Person/54119735?lang=en_GB' }
+  ]
+};
+
+const PEOPLE = [
+  {
+    name: 'Prof. Dr. Pornkasem Jongpradist',
+    email: 'pornkasem.jon@kmutt.ac.th',
+    emailVerified: true,
+    role: 'Principal Investigator',
+    division: 'Geotechnical Engineering',
+    note: 'Associate Dean for Research, Faculty of Engineering',
+    bio: 'Numerical methods in geomechanics, ground improvement, and tunnelling and underground construction. Recent work automates the estimation of tunnelling-induced ground stability and settlement.',
+    metric: '5,000+ citations',
+    links: [
+      { label: 'Scholar', url: 'https://scholar.google.com/citations?user=oaz_nvAAAAAJ' },
+      { label: 'KIRIM', url: 'https://kirim.kmutt.ac.th/converis/portal/detail/Person/54115002?lang=en_GB' }
+    ]
+  },
+  {
+    name: 'Prof. Dr. Warat Kongkitkul',
+    email: 'warat.kon@kmutt.ac.th',
+    emailVerified: true,
+    role: 'Principal Investigator',
+    division: 'Geotechnical Engineering',
+    note: 'Head of Geotechnical Engineering Programme',
+    bio: 'Geosynthetics, geotechnical instrumentation and physical modelling. Contributes the experimental backbone for the group&rsquo;s pavement, resistivity and reinforcement datasets.',
+    metric: '2,200+ citations',
+    links: [
+      { label: 'Scholar', url: 'https://scholar.google.com/citations?user=3ovvMlMAAAAJ' },
+      { label: 'KIRIM', url: 'https://kirim.kmutt.ac.th/converis/portal/detail/Person/54212134?lang=en_GB' }
+    ]
+  },
+  {
+    name: 'Prof. Dr. Sutat Leelataviwat',
+    email: 'sutat.lee@kmutt.ac.th',
+    emailVerified: true,
+    role: 'Principal Investigator',
+    division: 'Structural Engineering',
+    note: 'Head, Institute for Scientific and Technological Research',
+    bio: 'Seismic design, structural dynamics and earthquake engineering. Brings structural performance assessment into the group&rsquo;s liquefaction and hazard modelling work.',
+    metric: '1,100+ citations',
+    links: [
+      { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Sutat-Leelataviwat' },
+      { label: 'KIRIM', url: 'https://kirim.kmutt.ac.th/converis/portal/detail/Person/54140039?lang=en_GB' }
+    ]
+  },
+  {
+    name: 'Prof. Dr. Weerachart Tangchirapat',
+    email: 'weerachart.tan@kmutt.ac.th',
+    emailVerified: true,
+    role: 'Principal Investigator',
+    division: 'Construction Materials',
+    note: 'Deputy Director, M.Eng. Civil Engineering Technology',
+    bio: 'Concrete technology and industrial by-products as alternative binders. This covers fly ash, bottom ash, biomass ash and recycled aggregate. Co-leads the concrete creep prediction work.',
+    metric: 'Alkali-activated &amp; eco-concrete',
+    links: [
+      { label: 'Scholar', url: 'https://scholar.google.com/citations?user=9H_2wokAAAAJ' },
+      { label: 'KIRIM', url: 'https://kirim.kmutt.ac.th/converis/portal/detail/Person/54248298?lang=en_GB' }
+    ]
+  },
+  {
+    name: 'Asst. Prof. Dr. Chana Phutthananon',
+    email: 'chana.phu@kmutt.ac.th',
+    emailVerified: false,
+    role: 'Principal Investigator',
+    division: 'Geotechnical Engineering',
+    bio: 'Ground improvement, pile-supported embankments, and tunnelling effects on adjacent structures. Leads the rubber-modified asphalt and pavement overlay studies.',
+    metric: 'Ground improvement &amp; pavement',
+    links: [
+      { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Chana-Phutthananon' }
+    ]
+  },
+  {
+    name: 'Asst. Prof. Dr. Chanchai Petpongpan',
+    email: 'chanchai.pet@kmutt.ac.th',
+    emailVerified: false,
+    role: 'Principal Investigator',
+    division: 'Water Resources Engineering',
+    note: 'Head of Water Resources Engineering Programme',
+    bio: 'Hydrological and hydraulic modelling, groundwater&ndash;surface water interaction and water resources management. Extends the group&rsquo;s machine learning methods to catchment-scale problems.',
+    metric: 'Hydrology &amp; water systems',
+    links: [
+      { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Chanchai-Petpongpan-2' }
+    ]
+  },
+  {
+    name: 'Dr. Chamroeun Se',
+    email: 'chamroeun.se@kmutt.ac.th',
+    emailVerified: false,
+    role: 'Principal Investigator',
+    division: 'Transportation Engineering',
+    bio: 'Road safety analytics, crash severity modelling and public transport. Applies tree-based learners, XGBoost&ndash;SHAP and unobserved heterogeneity models to Thai crash data.',
+    metric: '1,200+ citations &middot; h-index 21',
+    links: [
+      { label: 'Scholar', url: 'https://scholar.google.com/citations?user=2omiIakAAAAJ' }
+    ]
+  },
+  {
+    name: 'Dr. Kosit Jariyatatsakorn',
+    email: 'kosit.jar@kmutt.ac.th',
+    emailVerified: false,
+    role: 'Postdoctoral Researcher',
+    division: 'Geotechnical Engineering',
+    bio: 'Temperature-dependent behaviour of sands, creep deformation and stress relaxation under drained triaxial compression. Supplies the constitutive datasets behind the physics-informed models.',
+    metric: 'Creep &amp; rate effects',
+    links: [
+      { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Kosit_Jariyatatsakorn' }
+    ]
+  },
+  {
+    name: 'Tipok Kitkobsin',
+    email: 'tipok.kit@kmutt.ac.th',
+    emailVerified: false,
+    role: 'Researcher',
+    division: 'AI &amp; Geotechnical Engineering',
+    bio: 'Explainable dual-stream transformers for soil liquefaction prediction, and XAI frameworks for the shear strength of municipal solid waste. Lead author on the group&rsquo;s liquefaction work.',
+    metric: 'Liquefaction &amp; waste mechanics',
+    links: [
+      { label: 'Paper', url: 'https://www.sciencedirect.com/science/article/abs/pii/S1474034626004064' }
+    ]
+  }
+];
+
+/* ── Current projects ───────────────────────────────────────── */
+
+const PROJECTS = [
+  {
+    title: 'YOLO26-RD — end-to-end road damage detection',
+    status: 'Active',
+    theme: 'vision',
+    body: 'An NMS-free detector for alligator cracking, linear cracks and patching, built on YOLO26 with edge-guided downsampling and learnable tile-wise contrast adaptation. Trained on a re-audited road damage dataset.',
+    links: [
+      { label: 'Code', url: 'https://github.com/Sompote/YOLO26RD' },
+      { label: 'Demo', url: 'https://huggingface.co/spaces/Sompote/pavement_damage' }
+    ]
+  },
+  {
+    title: 'Agentic AI for automated foundation design',
+    status: 'Active',
+    theme: 'agentic',
+    body: 'Router-based multi-agent architectures where language models decompose a foundation design brief, call analysis tools and verify the result against code requirements. Includes a Model Context Protocol server for PLAXIS.',
+    links: [
+      { label: 'plaxisMCP', url: 'https://github.com/Sompote/plaxisMCP' },
+      { label: 'Model', url: 'https://huggingface.co/Sompote/DeepSeek-R1-foundation_design_V1' }
+    ]
+  },
+  {
+    title: 'FWD2Strain — pavement strain without backcalculation',
+    status: 'Active',
+    theme: 'geophysics',
+    body: 'Predicts the two critical pavement strains directly from a falling weight deflectometer test, skipping layer backcalculation entirely. Ships as a command line tool, a REST API and a web interface on one set of weights.',
+    links: [
+      { label: 'Code', url: 'https://github.com/Sompote/FWD2Strain' },
+      { label: 'Demo', url: 'https://huggingface.co/spaces/Sompote/FWD' }
+    ]
+  },
+  {
+    title: 'DINOv3 + YOLO — data-efficient detection',
+    status: 'Active',
+    theme: 'vision',
+    body: 'Pairs DINOv3 self-supervised visual features with YOLOv12 detection so useful accuracy is reachable from a few hundred labelled images. Detection, segmentation and 3D variants are all maintained.',
+    links: [
+      { label: 'Code', url: 'https://github.com/Sompote/DINOV3-YOLOV12' },
+      { label: 'Segmentation', url: 'https://github.com/Sompote/DinoV3-YOLO-Segment' }
+    ]
+  },
+  {
+    title: 'Physics-informed models for elasto-plastic analysis',
+    status: 'Active',
+    theme: 'pinn',
+    body: 'Fourier-feature PINNs applied to elasto-plastic boundary value problems, alongside a critical assessment of where PINNs and operator learning genuinely help geotechnical practice and where they do not.',
+    links: [
+      { label: 'QPINNS', url: 'https://github.com/Sompote/QPINNS' }
+    ]
+  },
+  {
+    title: 'Surface wave inversion toolkit',
+    status: 'Active',
+    theme: 'geophysics',
+    body: 'An open Python toolkit for multichannel and spectral analysis of surface waves, recovering 1-D shear-wave velocity profiles from a Rayleigh phase-velocity curve. Paired with a hosted inversion demo.',
+    links: [
+      { label: 'PyMASWaves', url: 'https://github.com/Sompote/PyMASWaves' },
+      { label: 'Demo', url: 'https://huggingface.co/spaces/Sompote/openSWI' }
+    ]
+  },
+  {
+    title: 'Concrete creep prediction',
+    status: 'Active',
+    theme: 'materials',
+    body: 'A triple-attention transformer for time-dependent concrete creep, trained across mix designs and loading histories. Built with the construction materials group.',
+    links: [
+      { label: 'Code', url: 'https://github.com/Sompote/concrete_creep_repo' },
+      { label: 'Demo', url: 'https://huggingface.co/spaces/Sompote/Concrete_creep_predict' }
+    ]
+  },
+  {
+    title: 'SAM3 LoRA — segmentation for site imagery',
+    status: 'Active',
+    theme: 'vision',
+    body: 'Parameter-efficient fine-tuning of Segment Anything 3 with LoRA for engineering image datasets, so a segmentation backbone can be adapted on a single GPU.',
+    links: [
+      { label: 'Code', url: 'https://github.com/Sompote/SAM3_LoRA' }
+    ]
+  }
+];
+
+/* ── Publications ───────────────────────────────────────────── */
+
+const ME = /(Youwai|Jongpradist|Kongkitkul|Leelataviwat|Tangchirapat|Phutthananon|Petpongpan|Kitkobsin|Jariyatatsakorn|Se, C)/;
+
+const PUBS = [
+  { y: 2026, theme: 'materials', title: 'Elastic properties of rubber-modified asphaltic concrete under various stress states', authors: 'C. Phutthananon, S. Youwai, P. Preeyanon, W. Kongkitkul, P. Jongpradist', venue: 'International Journal of Pavement Engineering, 27(1)', type: 'Journal' },
+  { y: 2026, theme: 'agentic', title: 'Large language model-based multi-agent systems for automated foundation design', authors: 'S. Youwai, D. Phim, V. G. Murcia, R. C. Onas', venue: 'AI in Civil Engineering, 5(1)', type: 'Journal' },
+  { y: 2026, theme: 'sequence', title: 'Explainable dual-stream transformer for soil liquefaction prediction', authors: 'T. Kitkobsin, S. Youwai, S. Leelataviwat, P. Jongpradist', venue: 'Advanced Engineering Informatics, 74', type: 'Journal', url: 'https://www.sciencedirect.com/science/article/abs/pii/S1474034626004064' },
+  { y: 2026, theme: 'vision', title: 'YOLO26-RD: an end-to-end road damage detection network', authors: 'S. Youwai, P. Chaipetch, H. Samaikul, T. Yonseng', venue: 'arXiv preprint', type: 'Preprint' },
+  { y: 2026, theme: 'geophysics', title: 'TriView-YOLO: early multi-view fusion for ground penetrating radar cavity detection', authors: 'S. Thawinutchokaudom, S. Youwai, W. Kongkitkul, M. Yamashina, et al.', venue: 'arXiv preprint', type: 'Preprint' },
+  { y: 2026, theme: 'geophysics', title: 'A practical method for predicting pavement strains and overlay thickness', authors: 'C. Phutthananon, W. Kongkitkul, C. Wantanagun, J. Sunitsakul, S. Youwai, et al.', venue: 'Transportation Infrastructure Geotechnology, 13(6)', type: 'Journal' },
+  { y: 2026, theme: 'xai', title: 'Prediction of waste shear strength parameters in open dumps', authors: 'P. Suknark, S. Towprayoon, S. Youwai, C. Chiemchaisri, K. Wangyao', venue: 'Waste Management, 222', type: 'Journal' },
+  { y: 2026, theme: 'pinn', title: 'Fourier feature physics-informed neural networks for elasto-plastic analysis', authors: 'A. Robjanghvad, S. Youwai', venue: 'arXiv preprint', type: 'Preprint' },
+  { y: 2025, theme: 'xai', title: 'Evaluation of shear strength parameters for municipal solid waste', authors: 'P. Suknark, S. Towprayoon, S. Youwai, C. Chiemchaisri, K. Wangyao', venue: 'Journal of Material Cycles and Waste Management, 27(6)', type: 'Journal' },
+  { y: 2025, theme: 'sequence', title: 'Artificial intelligence-optimized shield parameters for soft ground tunneling', authors: 'S. Wainiphithapong, C. Phutthananon, S. Youwai, P. Jamsawang, et al.', venue: 'Underground Space', type: 'Journal' },
+  { y: 2025, theme: 'agentic', title: 'Investigating the potential of large language model-based router multi-agent architectures', authors: 'S. Youwai, D. Phim, V. G. Murcia, R. C. Onas', venue: 'arXiv preprint', type: 'Preprint' },
+  { y: 2025, theme: 'xai', title: 'Developing an explainable artificial intelligence (XAI) model for predicting pile driving vibrations', authors: 'S. Youwai, A. Pamungmoon', venue: 'Neural Computing and Applications, 37(18)', type: 'Journal' },
+  { y: 2025, theme: 'materials', title: 'Strength and elastic properties of air&ndash;cement-treated clays', authors: 'C. Phutthananon, A. Songprom, R. Sukkarak, P. Jongpradist, W. Kongkitkul, S. Youwai', venue: 'Arabian Journal for Science and Engineering, 50(11)', type: 'Journal' },
+  { y: 2025, theme: 'materials', title: 'Triple attention transformer architecture for time-dependent concrete creep prediction', authors: 'W. Dokduea, W. Tangchirapat, S. Youwai', venue: 'arXiv preprint', type: 'Preprint' },
+  { y: 2025, theme: 'sequence', title: 'Load-deformation prediction of bored piles using sequential soil profile encoding with transformer architecture: a study of Bangkok subsoil', authors: 'S. Youwai, C. Thongnoo', venue: 'Expert Systems with Applications, 275', type: 'Journal', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0957417425007079' },
+  { y: 2025, theme: 'xai', title: 'Explainable dual-attention tabular transformer for soil electrical resistivity prediction', authors: 'W. Kongkitkul, S. Youwai, W. Sakulpojworachai', venue: 'arXiv preprint', type: 'Preprint' },
+  { y: 2025, theme: 'sequence', title: 'Evaluating and explaining earthquake-induced liquefaction potential through multi-modal transformers', authors: 'S. Youwai, T. Kitkobsin, S. Leelataviwat, P. Jongpradist', venue: 'arXiv:2502.10446', type: 'Preprint', url: 'https://arxiv.org/abs/2502.10446' },
+  { y: 2025, theme: 'sequence', title: 'Predicting rapid impact compaction of soil using a parallel transformer and long short-term memory architecture', authors: 'S. Youwai, S. Detcheewa', venue: 'Engineering Applications of Artificial Intelligence, 139', type: 'Journal' },
+  { y: 2024, theme: 'vision', title: 'A fused deep learning expert system for road damage detection and size analysis', authors: 'S. Youwai, A. Chaiyaphat, P. Chaipetch', venue: 'Int. Conf. on Intelligent Computing and Next Generation Networks', type: 'Conference' },
+  { y: 2024, theme: 'xai', title: 'Explainable artificial intelligence (XAI) for predicting asphalt concrete stiffness and rutting resistance', authors: 'W. Kongkitkul, S. Youwai, S. Khamsoy, M. Feungfung', venue: 'arXiv preprint', type: 'Preprint' },
+  { y: 2024, theme: 'vision', title: 'YOLO9tr: a lightweight model for pavement damage detection utilizing a generalized efficient layer aggregation network and attention mechanism', authors: 'S. Youwai, A. Chaiyaphat, P. Chaipetch', venue: 'Journal of Real-Time Image Processing, 21(5)', type: 'Journal' },
+  { y: 2015, theme: 'legacy', title: 'High internal pressure induced fracture patterns in rock masses surrounding caverns', authors: 'P. Jongpradist, J. Tunsakul, W. Kongkitkul, N. Fadsiri, G. Arangelovski, S. Youwai', venue: 'Engineering Geology, 197', type: 'Journal' },
+  { y: 2013, theme: 'legacy', title: 'Development of tunneling influence zones for adjacent pile foundations by numerical analyses', authors: 'P. Jongpradist, T. Kaewsri, A. Sawatparnich, S. Suwansawat, S. Youwai, et al.', venue: 'Tunnelling and Underground Space Technology, 34', type: 'Journal' },
+  { y: 2003, theme: 'legacy', title: 'Strength and deformation characteristics of shredded rubber tire sand mixtures', authors: 'S. Youwai, D. T. Bergado', venue: 'Canadian Geotechnical Journal, 40(2)', type: 'Journal' }
+];
+
+/* ── Software ───────────────────────────────────────────────── */
+
+const REPOS = [
+  { name: 'DINOV3-YOLOV12', stars: 318, lang: 'Python', desc: 'DINOv3 self-supervised features plus YOLOv12 detection in one repo. Built for datasets of a few hundred labelled images.' },
+  { name: 'SAM3_LoRA', stars: 254, lang: 'Python', desc: 'Fine-tune Segment Anything 3 with LoRA on image datasets. Single-GPU setup.' },
+  { name: 'Tigrimos', stars: 110, lang: 'TypeScript', desc: 'Self-hosted AI workspace with chat, code execution and parallel multi-agent orchestration.' },
+  { name: 'DINOV3_YOLO', stars: 74, lang: 'Python', desc: 'Detection backbone combining DINOv3 representations with a YOLO head.' },
+  { name: 'DinoV3-YOLO-Segment', stars: 54, lang: 'Python', desc: 'Segmentation variant of the DINOv3 + YOLO architecture.' },
+  { name: 'VisionLabel', stars: 27, lang: 'JavaScript', desc: 'Annotation tool for building engineering vision datasets.' },
+  { name: 'YOLO9tr', stars: 11, lang: 'Python', desc: 'Lightweight pavement damage detector with a generalized efficient layer aggregation network and attention.' },
+  { name: 'plaxisMCP', stars: 10, lang: 'Python', desc: 'Model Context Protocol server exposing PLAXIS finite-element analysis to AI agents.' },
+  { name: 'YOLO26RD', stars: 1, lang: 'Python', desc: 'NMS-free road damage detector with edge-guided downsampling and tile-wise contrast adaptation.' },
+  { name: 'FWD2Strain', stars: 0, lang: 'Python', desc: 'Critical pavement strains straight from an FWD test. CLI, REST API and web UI on shared weights.' },
+  { name: 'PyMASWaves', stars: 2, lang: 'Python', desc: 'Multichannel and spectral analysis of surface waves for shear-wave velocity profiling.' },
+  { name: 'QPINNS', stars: 0, lang: 'Python', desc: 'Physics-informed neural networks for elasto-plastic boundary value problems.' }
+];
+
+const SPACES = [
+  { id: 'Sompote/FWD', name: 'DBFT Pavement Strain Predictor', desc: 'Predict pavement strains directly from FWD measurements.' },
+  { id: 'Sompote/openSWI', name: 'Vs from Dispersion Curve', desc: '1-D shear-wave velocity from a Rayleigh phase-velocity curve.' },
+  { id: 'Sompote/MSW_Shear', name: 'MSW Shear Strength', desc: 'Friction angle and cohesion of municipal solid waste from composition.' },
+  { id: 'Sompote/SoilResistivity', name: 'Soil Resistivity Prediction', desc: 'Predict soil electrical resistivity from index properties.' },
+  { id: 'Sompote/Liquefaction_prediction', name: 'Liquefaction Prediction', desc: 'Multi-modal transformer for earthquake-induced liquefaction potential.' },
+  { id: 'Sompote/Pile_deform', name: 'Bored Pile Load-Deformation', desc: 'Load-deformation curves from an encoded Bangkok subsoil profile.' },
+  { id: 'Sompote/Concrete_creep_predict', name: 'Concrete Creep Prediction', desc: 'Time-dependent creep from mix design and loading history.' },
+  { id: 'Sompote/pavement_damage', name: 'Pavement Damage Detection', desc: 'YOLO-based road distress detection on uploaded imagery.' },
+  { id: 'Sompote/PileVibrationXAI', name: 'Pile Driving Vibration XAI', desc: 'Explainable prediction of ground vibration from pile driving.' },
+  { id: 'Sompote/Tunnel_defext', name: 'Tunnel Deformation Extraction', desc: 'Extract tunnel deformation measurements from survey data.' },
+  { id: 'Sompote/crack_detection', name: 'Concrete Crack Detection', desc: 'Segment cracks in concrete surface photographs.' },
+  { id: 'Sompote/PVDcal', name: 'PVD Calculator', desc: 'Prefabricated vertical drain consolidation for multilayer ground.' }
+];
+
+/* ── Department contact ─────────────────────────────────────── */
+
+const CONTACT = {
+  lead: { name: 'Assoc. Prof. Dr. Sompote Youwai', email: 'sompote.you@kmutt.ac.th', phone: '+66 2470 9141' },
+  dept: { name: 'Department of Civil Engineering', phone: '+66 2470 9134', fax: '+66 2427 9063', web: 'https://ce.kmutt.ac.th/en/' },
+  address: [
+    'AI Research Group',
+    'Department of Civil Engineering, Faculty of Engineering',
+    "King Mongkut's University of Technology Thonburi",
+    '126 Pracha Uthit Road, Bang Mod, Thung Khru',
+    'Bangkok 10140, Thailand'
+  ]
+};
