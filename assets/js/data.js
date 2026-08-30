@@ -141,7 +141,7 @@ const PEOPLE = [
     division: 'Construction Materials',
     note: 'Deputy Director, M.Eng. Civil Engineering Technology',
     bio: 'Concrete technology and industrial by-products as alternative binders. This covers fly ash, bottom ash, biomass ash and recycled aggregate. Co-leads the concrete creep prediction work.',
-    metric: 'Alkali-activated &amp; eco-concrete',
+    metric: '5,400+ citations &middot; h-index 41',
     links: [
       { label: 'Scholar', url: 'https://scholar.google.com/citations?user=9H_2wokAAAAJ' },
       { label: 'KIRIM', url: 'https://kirim.kmutt.ac.th/converis/portal/detail/Person/54248298?lang=en_GB' }
