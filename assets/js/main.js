@@ -53,8 +53,17 @@
     </article>`).join('');
 
   /* ── people ────────────────────────────────────────────── */
-  const linkPills = (arr) => arr.map((l) =>
-    `<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join('');
+  // Identifier links are generated from the orcid/scopus ids so the two are
+  // never out of step with each other across cards.
+  const idLinks = (p) => {
+    const out = [];
+    if (p.orcid) out.push({ label: 'ORCID', url: 'https://orcid.org/' + p.orcid, cls: ' id-orcid' });
+    if (p.scopus) out.push({ label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=' + p.scopus, cls: ' id-scopus' });
+    return out;
+  };
+
+  const linkPills = (arr, p) => arr.concat(p ? idLinks(p) : []).map((l) =>
+    `<a class="pill${l.cls || ''}" href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join('');
 
   const mailRow = (email) => email
     ? `<a class="p-mail" href="mailto:${email}">${MAIL_ICON}${email}</a>` : '';
@@ -83,7 +92,7 @@
       </div>
       <div class="p-foot" style="border-top:0;padding-top:0">
         ${mailRow(LEAD.email)}
-        <div class="p-links">${linkPills(LEAD.links)}</div>
+        <div class="p-links">${linkPills(LEAD.links, LEAD)}</div>
       </div>
     </div>`;
 
@@ -102,7 +111,7 @@
       <div><span class="p-metric">${p.metric}</span></div>
       <div class="p-foot">
         ${mailRow(p.email)}
-        <div class="p-links">${linkPills(p.links)}</div>
+        <div class="p-links">${linkPills(p.links, p)}</div>
       </div>
     </article>`).join('');
 

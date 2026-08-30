@@ -71,6 +71,7 @@ const LEAD = {
   email: 'sompote.you@kmutt.ac.th',
   phone: '+66 2470 9141',
   photo: 'assets/img/people/sompote-youwai.jpg',
+  orcid: '0009-0002-9878-8504',
   bio: 'Sompote Youwai leads the group. His work moves along three connected paradigms: deep learning for prediction, computer vision for infrastructure monitoring, and agentic AI for design orchestration. Earlier work on rubber tyre&ndash;sand mixtures and reinforced embankments remains widely cited. He publishes the code and the weights for almost everything the group produces.',
   metrics: [
     { k: 'Citations', v: '1,943' },
@@ -81,7 +82,6 @@ const LEAD = {
     { label: 'Google Scholar', url: 'https://scholar.google.com/citations?user=rAIcivQAAAAJ' },
     { label: 'GitHub', url: 'https://github.com/Sompote' },
     { label: 'Hugging Face', url: 'https://huggingface.co/Sompote' },
-    { label: 'ORCID', url: 'https://orcid.org/0009-0002-9878-8504' },
     { label: 'KMUTT KIRIM', url: 'https://kirim.kmutt.ac.th/converis/portal/detail/Person/54119735?lang=en_GB' }
   ]
 };
@@ -89,6 +89,8 @@ const LEAD = {
 const PEOPLE = [
   {
     name: 'Prof. Dr. Pornkasem Jongpradist',
+    orcid: '0000-0003-4234-0575',
+    scopus: '35796870800',
     photo: 'assets/img/people/pornkasem-jongpradist.jpg',
     email: 'pornkasem.jon@kmutt.ac.th',
     emailVerified: true,
@@ -104,6 +106,8 @@ const PEOPLE = [
   },
   {
     name: 'Prof. Dr. Warat Kongkitkul',
+    orcid: '0000-0003-4075-0984',
+    scopus: '8832418400',
     photo: 'assets/img/people/warat-kongkitkul.jpg',
     email: 'warat.kon@kmutt.ac.th',
     emailVerified: true,
@@ -119,6 +123,8 @@ const PEOPLE = [
   },
   {
     name: 'Prof. Dr. Sutat Leelataviwat',
+    orcid: '0000-0001-9123-8126',
+    scopus: '6506956958',
     photo: 'assets/img/people/sutat-leelataviwat.jpg',
     email: 'sutat.lee@kmutt.ac.th',
     emailVerified: true,
@@ -134,6 +140,8 @@ const PEOPLE = [
   },
   {
     name: 'Prof. Dr. Weerachart Tangchirapat',
+    orcid: '0000-0002-4917-1367',
+    scopus: '15133064100',
     photo: 'assets/img/people/weerachart-tangchirapat.jpg',
     email: 'weerachart.tan@kmutt.ac.th',
     emailVerified: true,
@@ -149,6 +157,7 @@ const PEOPLE = [
   },
   {
     name: 'Asst. Prof. Dr. Chana Phutthananon',
+    orcid: '0009-0004-6718-0728',
     photo: 'assets/img/people/chana-phutthananon.jpg',
     email: 'chana.phu@kmutt.ac.th',
     emailVerified: false,
@@ -162,6 +171,7 @@ const PEOPLE = [
   },
   {
     name: 'Asst. Prof. Dr. Chanchai Petpongpan',
+    orcid: '0009-0007-2545-1683',
     photo: 'assets/img/people/chanchai-petpongpan.jpg',
     email: 'chanchai.pet@kmutt.ac.th',
     emailVerified: false,
@@ -176,6 +186,8 @@ const PEOPLE = [
   },
   {
     name: 'Dr. Chamroeun Se',
+    orcid: '0000-0002-5975-8989',
+    scopus: '57219304542',
     photo: 'assets/img/people/chamroeun-se.jpg',
     email: 'chamroeun.se@kmutt.ac.th',
     emailVerified: false,
@@ -189,6 +201,8 @@ const PEOPLE = [
   },
   {
     name: 'Dr. Kosit Jariyatatsakorn',
+    orcid: '0000-0003-4912-850X',
+    scopus: '58104830600',
     email: 'kosit.jar@kmutt.ac.th',
     emailVerified: false,
     role: 'Postdoctoral Researcher',
@@ -201,6 +215,8 @@ const PEOPLE = [
   },
   {
     name: 'Tipok Kitkobsin',
+    orcid: '0009-0000-6783-4147',
+    scopus: '59656639400',
     email: 'tipok.kit@kmutt.ac.th',
     emailVerified: false,
     role: 'Researcher',

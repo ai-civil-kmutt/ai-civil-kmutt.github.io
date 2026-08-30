@@ -70,6 +70,30 @@ automatically.
 The source portraits carry a KMUTT watermark in the top-left corner. The stylesheet
 zooms each image toward the face (`.ava img`) so the watermark sits outside the frame.
 
+## Author identifiers
+
+Each person carries an `orcid` and, where known, a `scopus` field in `data.js`. The link
+pills are generated from those ids, so adding one is a single line.
+
+All ten ORCID iDs were resolved against the ORCID public API and each returns the
+expected name. The seven Scopus Author IDs were taken from the researchers' own ORCID
+records, where they are self-asserted external identifiers.
+
+Three people have no Scopus link yet, because Scopus author ids are not public without a
+subscription and none of these three has published theirs through ORCID:
+
+- Sompote Youwai
+- Chana Phutthananon
+- Chanchai Petpongpan
+
+To add one, look up the author on Scopus, copy the `authorId` from the profile URL, and
+set `scopus: '<id>'` on that person in `data.js`.
+
+Chanchai Petpongpan has two ORCID records: `0009-0007-2545-1683`, which lists KMUTT as
+employer, and `0000-0002-8896-8168` from 2020, which lists nothing. Neither has any works
+attached and his papers carry no ORCID, so the two cannot be told apart from the outside.
+The site uses the KMUTT one. Confirm with him which is current.
+
 ## Citation metrics
 
 The `metric` field on each person in `data.js` carries their citation count and h-index.
