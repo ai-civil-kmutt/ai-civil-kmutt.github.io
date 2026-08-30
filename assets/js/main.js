@@ -59,7 +59,18 @@
   const mailRow = (email) => email
     ? `<a class="p-mail" href="mailto:${email}">${MAIL_ICON}${email}</a>` : '';
 
+  // Initials fallback so a missing portrait still renders cleanly.
+  const initials = (name) => name
+    .replace(/^(Assoc\.|Asst\.)?\s*Prof\.\s*|^Dr\.?\s*/g, '')
+    .trim().split(/\s+/).slice(0, 2).map((w) => w[0]).join('').toUpperCase();
+
+  const avatar = (p, cls) => p.photo
+    ? `<div class="${cls}"><img src="${p.photo}" alt="${p.name}" loading="lazy" width="400" height="600"
+         onerror="this.parentNode.innerHTML='<span class=\'ava-txt\'>${initials(p.name)}</span>'"></div>`
+    : `<div class="${cls}"><span class="ava-txt">${initials(p.name)}</span></div>`;
+
   $('#people-lead').innerHTML = `
+    ${avatar(LEAD, 'ava ava-lead')}
     <div>
       <p class="pl-role">${LEAD.role}</p>
       <h3 class="pl-name">${LEAD.name}</h3>
@@ -78,8 +89,13 @@
 
   $('#people-grid').innerHTML = PEOPLE.map((p) => `
     <article class="person reveal">
-      <p class="p-role">${p.role}</p>
-      <h3 class="p-name">${p.name}</h3>
+      <div class="p-top">
+        ${avatar(p, 'ava')}
+        <div>
+          <p class="p-role">${p.role}</p>
+          <h3 class="p-name">${p.name}</h3>
+        </div>
+      </div>
       <p class="p-div">${p.division}</p>
       ${p.note ? `<p class="p-note">${p.note}</p>` : '<div style="height:.7rem"></div>'}
       <p class="p-bio">${p.bio}</p>

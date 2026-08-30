@@ -19,6 +19,7 @@ index.html            page structure
 assets/css/styles.css all styling, light and dark themes
 assets/js/data.js     ALL CONTENT — edit this file to update the site
 assets/js/main.js     rendering and interaction
+assets/img/people/    faculty portraits (see below)
 .nojekyll             tells GitHub Pages to serve assets/ as-is
 ```
 
@@ -52,6 +53,22 @@ git push -u origin main
 Then in the repository: **Settings → Pages → Source: Deploy from a branch → `main` / `/ (root)`**.
 
 For a custom domain, add a `CNAME` file containing the domain and set it under Settings → Pages.
+
+## Photographs
+
+Portraits in `assets/img/people/` are the official staff photographs from the
+Department of Civil Engineering directory at
+<https://ce.kmutt.ac.th/en/staffs-teachers-en/>, downloaded at 400x600 in August 2026.
+Each file is named after the person it shows.
+
+Two people have no portrait on the department page, because they are not faculty:
+Dr. Kosit Jariyatatsakorn and Tipok Kitkobsin. Their cards fall back to an initials
+avatar. To add a photo, drop a file into `assets/img/people/` and set the `photo` key
+on their entry in `data.js`. Any card whose image fails to load falls back to initials
+automatically.
+
+The source portraits carry a KMUTT watermark in the top-left corner. The stylesheet
+zooms each image toward the face (`.ava img`) so the watermark sits outside the frame.
 
 ## Data sources
 

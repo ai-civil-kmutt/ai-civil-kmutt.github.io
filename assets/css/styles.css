@@ -244,7 +244,7 @@ img { max-width: 100%; }
 /* ── people ───────────────────────────────────────────────── */
 
 .people-lead {
-  display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; align-items: start;
+  display: grid; grid-template-columns: auto 1.15fr 1fr; gap: 32px; align-items: start;
   background: var(--bg-card); border: 1px solid var(--line); border-left: 3px solid var(--accent);
   border-radius: var(--r); padding: 34px 36px; margin-bottom: 26px; box-shadow: var(--shadow);
 }
@@ -267,7 +267,7 @@ img { max-width: 100%; }
 }
 .person:hover { border-color: var(--line-2); box-shadow: var(--shadow); transform: translateY(-2px); }
 
-.p-name { font-size: 1.1rem; margin-bottom: .3rem; }
+.p-name { font-size: 1.1rem; margin-bottom: .3rem; line-height: 1.25; }
 .p-role { font-size: .71rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: .5rem; }
 .p-div { font-size: .82rem; color: var(--ink-3); margin-bottom: .1rem; }
 .p-note { font-size: .8rem; color: var(--ink-3); font-style: italic; margin-bottom: .8rem; }
@@ -293,6 +293,33 @@ img { max-width: 100%; }
   transition: background .15s, color .15s, border-color .15s;
 }
 .p-links a:hover { background: var(--accent-sf); color: var(--accent-ink); border-color: color-mix(in srgb, var(--accent) 30%, transparent); }
+
+/* ── avatars ──────────────────────────────────────────────── */
+
+.ava {
+  flex: none; overflow: hidden; border-radius: 12px;
+  background: linear-gradient(150deg, var(--bg-sunk), var(--bg-alt));
+  border: 1px solid var(--line);
+  display: grid; place-items: center;
+  width: 74px; height: 92px;
+}
+.ava img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block;
+  /* Source portraits carry a KMUTT watermark in the top-left corner.
+     Zooming toward the face pushes it outside the frame. */
+  transform: scale(1.26); transform-origin: 52% 34%;
+}
+.ava-txt {
+  font-family: var(--serif); font-size: 1.3rem; font-weight: 600;
+  color: var(--ink-3); letter-spacing: .02em;
+}
+
+.ava-lead { width: 132px; height: 168px; border-radius: 14px; }
+.ava-lead .ava-txt { font-size: 2.2rem; }
+
+.p-top { display: flex; gap: 15px; align-items: flex-start; margin-bottom: .8rem; }
+.p-top .p-role { margin-bottom: .25rem; }
+.p-top .p-name { margin-bottom: 0; }
 
 /* ── projects ─────────────────────────────────────────────── */
 
@@ -426,7 +453,8 @@ img { max-width: 100%; }
 
 @media (max-width: 940px) {
   .stats { grid-template-columns: repeat(2, 1fr); }
-  .people-lead { grid-template-columns: 1fr; gap: 24px; padding: 28px; }
+  .people-lead { grid-template-columns: auto 1fr; gap: 24px; padding: 28px; }
+  .people-lead > div:last-child { grid-column: 1 / -1; }
   .sw-split { grid-template-columns: 1fr; gap: 44px; }
   .contact-wrap { grid-template-columns: 1fr; gap: 32px; }
 }
@@ -449,6 +477,8 @@ img { max-width: 100%; }
   .pub-y { order: -1; }
   .pub-type { justify-self: start; margin-top: 6px; }
   .pl-metrics { flex-direction: column; }
+  .people-lead { grid-template-columns: 1fr; }
+  .ava-lead { width: 112px; height: 142px; }
 }
 
 @media (max-width: 460px) {
