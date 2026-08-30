@@ -105,8 +105,8 @@
 
   /* ── publications ──────────────────────────────────────── */
   const THEME_NAMES = {};
-  THEMES.forEach((t) => { THEME_NAMES[t.id] = t.title.split(' ').slice(0, 3).join(' '); });
-  THEME_NAMES.legacy = 'Foundational work';
+  THEMES.forEach((t) => { THEME_NAMES[t.id] = t.short || t.title; });
+  THEME_NAMES.legacy = 'Foundational';
 
   const FILTERS = [{ id: 'all', label: 'All' }].concat(
     Object.keys(THEME_NAMES)

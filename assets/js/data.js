@@ -6,6 +6,7 @@
 const THEMES = [
   {
     id: 'sequence',
+    short: 'Transformers',
     n: '01',
     title: 'Transformers for geotechnical prediction',
     body: 'Soil profiles are sequences. We encode borehole logs, seismic records and CPT traces as token streams and let attention models read them the way an engineer reads a log. The approach now covers bored pile load-deformation, liquefaction potential, rapid impact compaction and soil electrical resistivity.',
@@ -13,6 +14,7 @@ const THEMES = [
   },
   {
     id: 'vision',
+    short: 'Computer vision',
     n: '02',
     title: 'Computer vision for infrastructure inspection',
     body: 'Detectors that survive contact with a real road survey. YOLO9tr and YOLO26-RD find pavement distress without non-maximum suppression. DINOv3-YOLOv12 pairs self-supervised features with a fast detector, so a few hundred labelled images are enough. Related work covers tunnel deformation, concrete cracks and railway obstruction.',
@@ -20,6 +22,7 @@ const THEMES = [
   },
   {
     id: 'agentic',
+    short: 'Agentic AI',
     n: '03',
     title: 'Agentic AI and LLM systems for design',
     body: 'Design is a workflow, not a single prediction. We build multi-agent systems where language models plan, call analysis tools, check codes of practice and produce a checked foundation design. The plaxisMCP server puts a finite-element package directly in reach of an agent.',
@@ -27,6 +30,7 @@ const THEMES = [
   },
   {
     id: 'pinn',
+    short: 'Physics-informed ML',
     n: '04',
     title: 'Physics-informed and scientific machine learning',
     body: 'Where data is scarce, the governing equations are the data. We use Fourier-feature physics-informed neural networks for elasto-plastic analysis, and we assess honestly where PINNs and operator learning actually beat classical solvers in geotechnical practice.',
@@ -34,6 +38,7 @@ const THEMES = [
   },
   {
     id: 'xai',
+    short: 'Explainable AI',
     n: '05',
     title: 'Explainable AI for engineering decisions',
     body: 'A number an engineer cannot interrogate is a number they cannot sign off. We pair our predictive models with attribution analysis. That means SHAP, attention maps and dual-attention tabular architectures, so the physical drivers behind a prediction stay visible.',
@@ -41,6 +46,7 @@ const THEMES = [
   },
   {
     id: 'materials',
+    short: 'Materials',
     n: '06',
     title: 'Materials and concrete informatics',
     body: 'Long-term material behaviour is a time-series problem. A triple-attention transformer predicts time-dependent concrete creep. Parallel work targets alkali-activated binders, recycled aggregate and supplementary cementitious materials, run with the construction materials group.',
@@ -48,6 +54,7 @@ const THEMES = [
   },
   {
     id: 'geophysics',
+    short: 'Geophysics & NDT',
     n: '07',
     title: 'Geophysics and non-destructive testing',
     body: 'Faster ground models from surface measurements. We invert Rayleigh dispersion curves for shear-wave velocity profiles, predict critical pavement strains straight from falling weight deflectometer data without backcalculation, and fuse multi-view ground penetrating radar to find cavities.',
