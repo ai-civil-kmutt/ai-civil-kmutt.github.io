@@ -57,8 +57,8 @@ const THEMES = [
     short: 'Geophysics & NDT',
     n: '07',
     title: 'Geophysics and non-destructive testing',
-    body: 'Faster models from surface measurements. We invert Rayleigh dispersion curves for shear-wave velocity profiles, predict critical pavement strains straight from falling weight deflectometer data without backcalculation, and fuse multi-view ground penetrating radar to find cavities. Terrestrial laser scanning extends the same idea above ground, to pagodas, masonry and tunnel linings.',
-    tags: ['MASW / SASW', 'FWD', 'GPR', 'Laser scanning']
+    body: 'Faster ground models from surface measurements. We invert Rayleigh dispersion curves for shear-wave velocity profiles, predict critical pavement strains straight from falling weight deflectometer data without backcalculation, and fuse multi-view ground penetrating radar to find cavities.',
+    tags: ['MASW / SASW', 'FWD', 'GPR']
   },
   {
     id: 'safety',
@@ -75,6 +75,14 @@ const THEMES = [
     title: 'Water resources and climate adaptation',
     body: 'Physical basin models are accurate and slow. We train deep learning surrogates on them, so flood forecasts run at a fraction of the cost of a hydrodynamic solver, and couple cluster-based networks to SWAT-MODFLOW to predict groundwater levels where observations are sparse.',
     tags: ['Deep learning surrogates', 'Flood forecasting', 'SWAT-MODFLOW coupling']
+  },
+  {
+    id: 'shm',
+    short: 'Monitoring & twins',
+    n: '10',
+    title: 'Structural health monitoring and digital twins',
+    body: 'A laser scan gives the geometry, a nonlinear model gives the behaviour, and a repeat survey gives the change. We close that loop on Thai historic pagodas, masonry walls and tunnel linings: terrestrial scanning records the structure as it actually stands, finite element models estimate how it carries load and what an earthquake would do to it, and later scans show what has moved.',
+    tags: ['Laser scanning', 'Nonlinear FE', 'Heritage structures']
   }
 ];
 
@@ -400,6 +408,14 @@ const PUBS = [
   { y: 2022, theme: 'safety', title: 'Motorcyclist injury severity analysis: a comparison of artificial neural networks and a random parameter model with heterogeneity in means and variances', authors: 'C. Se, T. Champahom, S. Jomnonkwao, V. Ratanavaraha', venue: 'International Journal of Injury Control and Safety Promotion', type: 'Journal' },
   { y: 2026, theme: 'water', title: 'Enhancing flood forecasting with deep learning: a scalable alternative to traditional hydrodynamic models', authors: 'W. Duangkhwan, C. Ekkawatpanit, C. Petpongpan, D. Kositgittiwong, S. Kazama, Y. Hiraga, C. Jaturapitakkul', venue: 'Environmental Modelling &amp; Software', type: 'Journal' },
   { y: 2026, theme: 'water', title: 'Enhancing groundwater level prediction in data-scarce regions: coupling SWAT-MODFLOW with cluster-based deep learning', authors: 'W. Duangkwan, C. Petpongpan, C. Ekkawatpanit, D. Kositgittiwong, C. Jaturapitakkul', venue: 'Research Square preprint', type: 'Preprint', url: 'https://doi.org/10.21203/rs.3.rs-8440121/v1' },
+  { y: 2026, theme: 'shm', title: 'Seismic performance and possible damage scenario of an ancient Thai pagoda in Chiang Saen District, Northern Thailand', authors: 'K. Jintrakham, P. Mahasuwanchai, W. Wararuksajja, C. Athisakul, T. Ornthammarath, P. Jongpradist, S. Leelataviwat', venue: 'Results in Engineering', type: 'Journal' },
+  { y: 2026, theme: 'shm', title: 'Tunnel deformation monitoring during construction using 3D laser scanning technology', authors: 'A. Intham, P. Jongpradist, C. Binzaits, P. Mahasuwanchai, P. Kungsuwan, A. Thuaksiri', venue: 'Connecting Communities Through Underground Infrastructure', type: 'Conference' },
+  { y: 2025, theme: 'shm', title: 'Nonlinear finite element modeling and seismic analysis of Thai historical masonry wall structures', authors: 'F. Wu, C. Athisakul, P. Mahasuwanchai, C. Phansangud, S. Leelataviwat, K. Jintrakham, W. Wen, H. Yang', venue: 'IOP Conference Series: Earth and Environmental Science', type: 'Conference' },
+  { y: 2025, theme: 'shm', title: 'Building data acquisition and seismic performance evaluation of a traditional Thai water tower using 3D laser scanning', authors: 'F. Wu, C. Athisakul, T. Srimontriphakdi, C. Binzaits, P. Mahasuwanchai, S. Leelataviwat', venue: 'IOP Conference Series: Earth and Environmental Science', type: 'Conference' },
+  { y: 2024, theme: 'shm', title: 'Long-term monitoring and finite element analysis of the Pasana Chedi, Wat Ratchapradit Sathimahasimaram', authors: 'C. Binzaits, P. Mahasuwanchai, C. Athisakul, S. Leelataviwat, S. Chucheepsakul, C. Tingsanchali, C. Sudthongkhong', venue: "The Journal of King Mongkut's University of Technology North Bangkok", type: 'Journal' },
+  { y: 2023, theme: 'shm', title: 'A non-contact approach for cable tension evaluation based on 3D laser scanning data and nonlinear finite element analysis', authors: 'T. Srimontriphakdi, P. Mahasuwanchai, C. Athisakul, S. Leelataviwat, K. Klaycham, N. Poovarodom, N. Magteppong, S. Chucheepsakul', venue: 'Measurement', type: 'Journal' },
+  { y: 2021, theme: 'shm', title: 'An alternative method for long-term monitoring of Thai historic pagodas based on terrestrial laser scanning data: a case study of Wat Krachee in Ayutthaya', authors: 'P. Mahasuwanchai, C. Athisakul, P. Sairuamyat, W. Tangchirapat, S. Leelataviwat, S. Chucheepsakul', venue: 'Advances in Civil Engineering', type: 'Journal' },
+  { y: 2020, theme: 'shm', title: 'Application of 3D laser scanning technology for preservation and monitoring of a Thai pagoda', authors: 'P. Sairuamyat, P. Mahasuwanchai, C. Athisakul, S. Leelataviwat, S. Chucheepsakul', venue: 'IOP Conference Series: Earth and Environmental Science', type: 'Conference' },
   { y: 2015, theme: 'legacy', title: 'High internal pressure induced fracture patterns in rock masses surrounding caverns', authors: 'P. Jongpradist, J. Tunsakul, W. Kongkitkul, N. Fadsiri, G. Arangelovski, S. Youwai', venue: 'Engineering Geology, 197', type: 'Journal' },
   { y: 2013, theme: 'legacy', title: 'Development of tunneling influence zones for adjacent pile foundations by numerical analyses', authors: 'P. Jongpradist, T. Kaewsri, A. Sawatparnich, S. Suwansawat, S. Youwai, et al.', venue: 'Tunnelling and Underground Space Technology, 34', type: 'Journal' },
   { y: 2003, theme: 'legacy', title: 'Strength and deformation characteristics of shredded rubber tire sand mixtures', authors: 'S. Youwai, D. T. Bergado', venue: 'Canadian Geotechnical Journal, 40(2)', type: 'Journal' }

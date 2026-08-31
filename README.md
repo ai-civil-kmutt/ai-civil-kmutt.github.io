@@ -29,7 +29,7 @@ Everything on the page comes from `assets/js/data.js`. Each block is a plain arr
 
 | Constant   | Controls                                         |
 |------------|--------------------------------------------------|
-| `THEMES`   | the nine research theme cards                     |
+| `THEMES`   | the ten research theme cards                      |
 | `LEAD`     | the principal investigator panel                  |
 | `PEOPLE`   | the other principal investigators and researchers |
 | `PROJECTS` | current project cards                             |
@@ -42,7 +42,14 @@ Adding a publication means appending one object to `PUBS`. The `theme` value mus
 a `THEMES` id, or `legacy` for older foundational work. The list renders newest first,
 so insertion order does not matter; papers of the same year keep their order in the file.
 
-`PUBS` is deliberately restricted to work that uses machine learning. Several members
+Theme 10, structural health monitoring and digital twins, is the one exception to the
+machine learning rule below. Chainarong Athisakul and Peerasit Mahasuwanchai's work is
+laser scanning and nonlinear finite element analysis, with no machine learning in it, and
+it is listed at the group lead's request. Note also that none of those papers uses the
+term "digital twin"; the scan, model and re-survey loop is what the term describes, but
+the framing is the group's rather than the papers'.
+
+Otherwise `PUBS` is restricted to work that uses machine learning. Several members
 publish extensively outside that scope, and those papers are left out on purpose rather
 than by oversight. For Chamroeun Se that excludes the random-parameter and mixed-logit
 econometrics; for Chanchai Petpongpan it excludes the SWAT-MODFLOW hydrology. Their
