@@ -63,17 +63,26 @@ For a custom domain, add a `CNAME` file containing the domain and set it under S
 
 ## Hero artwork
 
-`index.html` inlines an SVG in the hero: a layered ground section with boreholes and a
-tunnel on the left, resolving into a neural attention structure on the right. It was
-drafted by the Codex CLI against a written brief, then reviewed and wired into the theme.
+The hero picture is a pair of PNGs in `assets/img/`:
 
-It is inlined rather than linked so it can read the page's colours. It takes its strokes
-from `currentColor` and four hooks set on `.hero-art` in the stylesheet:
+    hero-light.png   dark ink, for the light theme
+    hero-dark.png    light ink, for the dark theme
 
-    --art-ink  --art-accent  --art-blue  --art-line
+It shows a building frame and tower crane over a ground section with soil strata, a
+bored pile and a tunnel bore, with a neural network drawing signals from sensor points
+on the structure.
 
-Change those and the drawing follows. Its own animation lives in a `<style>` block inside
-the SVG and is switched off under `prefers-reduced-motion`.
+Both are generated, not drawn by hand. `tools/render_hero.py` renders the scene with
+Pillow at 3x and downsamples with LANCZOS, then the output is resized to 1200x1050 and
+quantised to 200 colours, which takes each file from about 370 KB to about 85 KB with no
+visible banding. The script was written by the Codex CLI from a brief; re-run it to
+change the picture:
+
+    python3 tools/render_hero.py
+
+A raster image cannot re-theme itself, so both files ship and CSS shows one. Those
+selectors name the element as well as the class (`.hero-art img.art-dark`) because
+`.hero-art img` sets `display: block` and would otherwise win on specificity.
 
 ## Motion
 

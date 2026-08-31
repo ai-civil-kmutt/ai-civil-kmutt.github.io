@@ -182,17 +182,26 @@ img { max-width: 100%; }
 .hero-copy { min-width: 0; }
 .hero-copy .hero-cta { margin-bottom: 0; }
 .hero-art { margin: 0; min-width: 0; }
-.hero-art svg { width: 100%; height: auto; display: block; max-height: 500px; }
-
-/* The artwork draws its strokes from `currentColor` and reads these four
-   hooks for everything else, so it re-themes with the rest of the page. */
-.hero-art {
-  color: var(--ink);
-  --art-ink: var(--ink);
-  --art-accent: var(--accent);
-  --art-blue: var(--blue);
-  --art-line: var(--line-2);
+.hero-art img {
+  width: 100%; height: auto; display: block; max-height: 500px;
+  object-fit: contain;
 }
+
+/* Two renderings of the same picture, one per theme. Which one shows follows
+   the same three-state rule as the colour tokens: explicit choice wins, and
+   the system preference decides when no choice has been made. */
+/* These selectors must out-specify `.hero-art img` above, which sets
+   display:block, so each one names the element as well as the class. */
+.hero-art img.art-dark { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero-art img.art-light { display: none; }
+  :root:not([data-theme="light"]) .hero-art img.art-dark  { display: block; }
+}
+:root[data-theme="dark"]  .hero-art img.art-light { display: none; }
+:root[data-theme="dark"]  .hero-art img.art-dark  { display: block; }
+:root[data-theme="light"] .hero-art img.art-light { display: block; }
+:root[data-theme="light"] .hero-art img.art-dark  { display: none; }
 
 .hero h1 {
   font-size: clamp(2.4rem, 5vw, 3.85rem);
@@ -489,6 +498,7 @@ img { max-width: 100%; }
 @keyframes fadeIn    { from { opacity: 0; } to { opacity: 1; } }
 @keyframes gridDrift { from { background-position: 0 0, 0 0; } to { background-position: 62px 62px, 62px 62px; } }
 @keyframes sweep     { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+@keyframes drift     { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
 
 /* — reading progress — */
 .progress {
@@ -503,7 +513,7 @@ img { max-width: 100%; }
 .hero .lede      { animation: rise .8s cubic-bezier(.22,.7,.3,1) both;      animation-delay: .24s; }
 .hero .hero-cta  { animation: rise .8s cubic-bezier(.22,.7,.3,1) both;      animation-delay: .34s; }
 .hero .stats     { animation: rise .9s cubic-bezier(.22,.7,.3,1) both;      animation-delay: .44s; }
-.hero-art        { animation: fadeIn 1.4s ease both;                        animation-delay: .5s; }
+.hero-art img    { animation: fadeIn 1.4s ease both, drift 14s ease-in-out 1.9s infinite; }
 
 .hero-grid { animation: gridDrift 26s linear infinite; }
 
@@ -547,7 +557,7 @@ img { max-width: 100%; }
 
 @media (prefers-reduced-motion: reduce) {
   .hero .eyebrow, .hero h1, .hero .lede, .hero .hero-cta, .hero .stats,
-  .hero-art, .hero-grid, .stats > div::after, .pub {
+  .hero-art img, .hero-grid, .stats > div::after, .pub {
     animation: none !important;
   }
   .reveal { opacity: 1; transform: none; transition: none; }
