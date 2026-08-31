@@ -56,10 +56,14 @@ For a custom domain, add a `CNAME` file containing the domain and set it under S
 
 ## Photographs
 
-Portraits in `assets/img/people/` are the official staff photographs from the
-Department of Civil Engineering directory at
-<https://ce.kmutt.ac.th/en/staffs-teachers-en/>, downloaded at 400x600 in August 2026.
-Each file is named after the person it shows.
+Portraits in `assets/img/people/` are 400x600 JPEGs, named after the person they show.
+
+`sompote-youwai.jpg` was supplied by him directly. It is cropped to 2:3 from
+`DSC01323.jpg`, with the plain background extended upward by 80 px so the head keeps its
+headroom under the stylesheet zoom described below.
+
+The rest are the official staff photographs from the Department of Civil Engineering
+directory at <https://ce.kmutt.ac.th/en/staffs-teachers-en/>, downloaded in August 2026.
 
 Two people have no portrait on the department page, because they are not faculty:
 Dr. Kosit Jariyatatsakorn and Tipok Kitkobsin. Their cards fall back to an initials
@@ -67,8 +71,10 @@ avatar. To add a photo, drop a file into `assets/img/people/` and set the `photo
 on their entry in `data.js`. Any card whose image fails to load falls back to initials
 automatically.
 
-The source portraits carry a KMUTT watermark in the top-left corner. The stylesheet
-zooms each image toward the face (`.ava img`) so the watermark sits outside the frame.
+The department portraits carry a KMUTT watermark in the top-left corner. The stylesheet
+zooms every avatar toward the face (`.ava img`, `scale(1.26)`) so the watermark sits
+outside the frame. That zoom applies to all images, so a replacement portrait needs
+roughly 15 percent headroom above the head or the crown gets clipped.
 
 ## Author identifiers
 
