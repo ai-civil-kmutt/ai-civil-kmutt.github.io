@@ -184,6 +184,10 @@ Each entry carries a `plate`, which says what ground its artwork needs. Dark art
 Anything featured here is left out of the `REPOS` list below, so a project does not appear
 twice on the same screen.
 
+VisionLabel shows no licence badge on purpose. Its README states MIT, but the repository
+contains no LICENSE file, so GitHub reports no licence and the code is technically all
+rights reserved. Adding a LICENSE file would fix that, and the badge can go in afterwards.
+
 ## Partner logos
 
 `assets/img/partners/` holds nine supplied logos, trimmed of their borders and normalised

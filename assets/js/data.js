@@ -446,6 +446,15 @@ const FEATURED = [
     site: 'tigriden.github.io',
     desc: 'A small end-to-end research workbench. Per-folder terminals for AI coding agents, change tracking with one-click rollback, and LaTeX, PDF and Markdown read as typeset pages rather than source.',
     meta: ['Rust', 'MIT', '12 stars']
+  },
+  {
+    name: 'VisionLabel',
+    logo: 'assets/img/software/visionlabel.png',
+    plate: 'light',
+    url: 'https://github.com/Sompote/VisionLabel',
+    site: 'github.com/Sompote/VisionLabel',
+    desc: 'The annotation tool behind the group\u2019s vision datasets. Four modes in the browser \u2014 bounding box, oriented box, segmentation, and segmentation with a free-text description \u2014 exporting to YOLO, YOLO OBB, COCO, RefCOCO, ODVG and RF100-VL.',
+    meta: ['React', '27 stars']
   }
 ];
 
@@ -457,7 +466,6 @@ const REPOS = [
   { name: 'Tigrimos', stars: 110, lang: 'TypeScript', desc: 'Self-hosted AI workspace with chat, code execution and parallel multi-agent orchestration.' },
   { name: 'DINOV3_YOLO', stars: 74, lang: 'Python', desc: 'Detection backbone combining DINOv3 representations with a YOLO head.' },
   { name: 'DinoV3-YOLO-Segment', stars: 54, lang: 'Python', desc: 'Segmentation variant of the DINOv3 + YOLO architecture.' },
-  { name: 'VisionLabel', stars: 27, lang: 'JavaScript', desc: 'Annotation tool for building engineering vision datasets.' },
   { name: 'YOLO9tr', stars: 11, lang: 'Python', desc: 'Lightweight pavement damage detector with a generalized efficient layer aggregation network and attention.' },
   { name: 'plaxisMCP', stars: 10, lang: 'Python', desc: 'Model Context Protocol server exposing PLAXIS finite-element analysis to AI agents.' },
   { name: 'YOLO26RD', stars: 1, lang: 'Python', desc: 'NMS-free road damage detector with edge-guided downsampling and tile-wise contrast adaptation.' },
