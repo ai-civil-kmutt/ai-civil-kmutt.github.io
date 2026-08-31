@@ -276,8 +276,8 @@ The footer states this date. Re-check the counts before a major update.
 ## Email addresses — please verify before publishing
 
 KMUTT mostly uses `firstname.<first three letters of surname>@kmutt.ac.th`, but not
-always: Peerasit Mahasuwanchai is `peerasit.mahasu@kmutt.ac.th`, six letters rather than
-three. Treat any address that has not been checked against a KIRIM profile as a guess.
+always. Peerasit Mahasuwanchai is `peerasit.mahasu@kmutt.ac.th` and Atchara Intham is
+`atchara.intha@kmutt.ac.th`, five and six letters rather than three. Treat any address that has not been checked against a KIRIM profile as a guess.
 
 **Confirmed** against KMUTT KIRIM profile pages:
 

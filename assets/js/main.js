@@ -145,7 +145,7 @@
   ).join('');
 
   const boldNames = (authors) =>
-    authors.replace(/([A-Z]\.\s(?:[A-Z]\.\s)?(?:Youwai|Jongpradist|Kongkitkul|Leelataviwat|Tangchirapat|Phutthananon|Petpongpan|Kitkobsin|Jariyatatsakorn|Athisakul|Mahasuwanchai|Se)\b)/g, '<b>$1</b>');
+    authors.replace(/([A-Z]\.\s(?:[A-Z]\.\s)?(?:Youwai|Jongpradist|Kongkitkul|Leelataviwat|Tangchirapat|Phutthananon|Petpongpan|Kitkobsin|Jariyatatsakorn|Athisakul|Mahasuwanchai|Intham|Se)\b)/g, '<b>$1</b>');
 
   function renderPubs(filter) {
     // Newest first. Ties keep their order in data.js, so related papers stay together.

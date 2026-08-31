@@ -270,6 +270,17 @@ const PEOPLE = [
     links: []
   },
   {
+    name: 'Atchara Intham',
+    photo: 'assets/img/people/atchara-intham.jpg',
+    email: 'atchara.intha@kmutt.ac.th',
+    emailVerified: true,
+    role: 'Researcher',
+    division: 'AI &amp; Geotechnical Engineering',
+    bio: 'Computer vision for rock mass at the tunnel face. Reads the exposed face during excavation to judge rock mass condition, work that sits alongside her 3D laser scanning study of tunnel deformation during construction.',
+    metric: 'Tunnel face &amp; rock mass',
+    links: []
+  },
+  {
     name: 'Tipok Kitkobsin',
     photo: 'assets/img/people/tipok-kitkobsin.jpg',
     rg: 'Tipok-Kitkobsin',
