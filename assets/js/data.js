@@ -472,7 +472,7 @@ const FEATURED = [
     plate: 'light',
     url: 'https://tigrimosr.github.io',
     site: 'tigrimosr.github.io',
-    desc: 'A native desktop agent harness written entirely in Rust, using egui for the interface. It starts faster and uses less memory than the Python and Node.js original, and ships as one self-contained binary with no runtime to install.',
+    desc: 'A native desktop agent harness written entirely in Rust, using egui for the interface. It ships as one self-contained binary, 33\u00a0MB on Windows and 58\u00a0MB on macOS, with no runtime to install. The command-line agent idles at about 4\u00a0MB of memory and the desktop window at about 190\u00a0MB. Agents, tools and graph modes are set in plain YAML files.',
     meta: ['Rust', 'Apache&#8209;2.0', '75 stars']
   },
   {
