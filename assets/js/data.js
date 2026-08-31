@@ -460,7 +460,7 @@ const FEATURED = [
   {
     name: 'TigrimOS',
     logo: 'assets/img/software/tigrimos.png',
-    plate: 'dark',
+    plate: 'light',
     url: 'https://tigrimos.github.io',
     site: 'tigrimos.github.io',
     desc: 'A self-hosted agent harness for the desktop. It runs agents in parallel, reaches remote agents on other machines, sandboxes what they execute, and installs skills from a marketplace. Feedback from the user becomes a new skill, so agents improve run after run. Nothing leaves your own network.',
