@@ -465,6 +465,37 @@ img { max-width: 100%; }
 .contact-links li { display: flex; align-items: center; gap: 9px; }
 .contact-links svg { flex: none; color: var(--ink-3); }
 
+/* ── partners ─────────────────────────────────────────────── */
+
+.partners-band { padding: 58px 0 62px; border-top: 1px solid var(--line); }
+.partners-h { font-size: clamp(1.5rem, 2.6vw, 1.95rem); margin-bottom: .7rem; }
+.partners-band .sec-lede { max-width: 58ch; margin-bottom: 34px; }
+
+.partner-grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;
+}
+.partner {
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  padding: 22px 18px 18px; text-align: center;
+  background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--r);
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.partner:hover { border-color: var(--line-2); box-shadow: var(--shadow); transform: translateY(-2px); }
+
+/* The logos are supplied artwork, several on a white ground, so they sit on a
+   white plate in both themes rather than being recoloured or inverted. */
+.partner img {
+  height: 46px; width: auto; max-width: 100%; object-fit: contain; display: block;
+  background: #fff; border-radius: 8px; padding: 8px 12px; box-sizing: content-box;
+}
+.partner span { font-size: .78rem; color: var(--ink-3); line-height: 1.35; }
+
+@media (max-width: 460px) {
+  .partner-grid { grid-template-columns: repeat(2, 1fr); }
+  .partner img { height: 38px; }
+}
+
 /* ── footer ───────────────────────────────────────────────── */
 
 .foot { border-top: 1px solid var(--line); padding: 32px 0; background: var(--bg); }

@@ -171,6 +171,20 @@ employer, and `0000-0002-8896-8168` from 2020, which lists nothing. Neither has 
 attached and his papers carry no ORCID, so the two cannot be told apart from the outside.
 The site uses the KMUTT one. Confirm with him which is current.
 
+## Partner logos
+
+`assets/img/partners/` holds five supplied logos, trimmed of their borders and normalised
+to 160 px tall. They are shown on a white plate in both themes rather than being
+recoloured or inverted, since they are third-party trademarks and several already carry a
+white ground.
+
+The RTDI source file was itself clipped: the bottom line of Thai text, the words for
+railway system technology, was cut through mid-glyph. It is cropped above that line, so
+the mark reads cleanly but the institute's full name is not shown. A complete logo file
+would fix this.
+
+Logos assert a relationship. Keep this section accurate if a collaboration ends.
+
 ## Funding credit
 
 The footer carries `Research supported by API credits from Anthropic`, linking to
