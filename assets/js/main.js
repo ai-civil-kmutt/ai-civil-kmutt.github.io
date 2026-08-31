@@ -147,7 +147,11 @@
     authors.replace(/([A-Z]\.\s(?:[A-Z]\.\s)?(?:Youwai|Jongpradist|Kongkitkul|Leelataviwat|Tangchirapat|Phutthananon|Petpongpan|Kitkobsin|Jariyatatsakorn|Se)\b)/g, '<b>$1</b>');
 
   function renderPubs(filter) {
-    const rows = PUBS.filter((p) => filter === 'all' || p.theme === filter);
+    // Newest first. Ties keep their order in data.js, so related papers stay together.
+    const rows = PUBS.filter((p) => filter === 'all' || p.theme === filter)
+      .map((p, i) => [p, i])
+      .sort((a, b) => (b[0].y - a[0].y) || (a[1] - b[1]))
+      .map(([p]) => p);
     $('#pub-list').innerHTML = rows.map((p, i) => {
       const title = p.url
         ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>`

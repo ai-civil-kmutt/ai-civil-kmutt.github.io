@@ -39,7 +39,14 @@ Everything on the page comes from `assets/js/data.js`. Each block is a plain arr
 | `CONTACT`  | address and department contact details            |
 
 Adding a publication means appending one object to `PUBS`. The `theme` value must match
-a `THEMES` id, or `legacy` for older foundational work.
+a `THEMES` id, or `legacy` for older foundational work. The list renders newest first,
+so insertion order does not matter; papers of the same year keep their order in the file.
+
+`PUBS` is deliberately restricted to work that uses machine learning. Several members
+publish extensively outside that scope, and those papers are left out on purpose rather
+than by oversight. For Chamroeun Se that excludes the random-parameter and mixed-logit
+econometrics; for Chanchai Petpongpan it excludes the SWAT-MODFLOW hydrology. Their
+personal profiles, linked on each card, carry the full record.
 
 ## Deploying to GitHub Pages
 

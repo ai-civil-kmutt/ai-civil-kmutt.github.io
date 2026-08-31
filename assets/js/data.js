@@ -65,16 +65,16 @@ const THEMES = [
     short: 'Road safety',
     n: '08',
     title: 'Road safety and transport analytics',
-    body: 'Crash records are messy and the factors behind them move over time. We use tree-based learners and SHAP attribution to show which factors drive injury severity, and random-parameter models to carry the heterogeneity those methods leave behind. Parallel work forecasts travel demand, rail ridership and electric vehicle uptake.',
-    tags: ['Crash severity', 'SHAP attribution', 'Travel demand']
+    body: 'Crash records are messy and the factors behind them move over time. Random forests, gradient boosting and convolutional networks predict injury severity, and SHAP attribution says which factors drove each prediction. The same learners forecast transport energy demand and rail ridership.',
+    tags: ['Crash severity', 'SHAP attribution', 'Demand forecasting']
   },
   {
     id: 'water',
     short: 'Water resources',
     n: '09',
     title: 'Water resources and climate adaptation',
-    body: 'Surface water and groundwater are one system, so we model them as one. Coupled hydrological and groundwater models over Thai river basins project how climate change shifts recharge, extremes and landslide risk, and test abstraction and adaptation strategies against those projections.',
-    tags: ['Coupled SW\u2013GW models', 'Climate projection', 'Basin management']
+    body: 'Physical basin models are accurate and slow. We train deep learning surrogates on them, so flood forecasts run at a fraction of the cost of a hydrodynamic solver, and couple cluster-based networks to SWAT-MODFLOW to predict groundwater levels where observations are sparse.',
+    tags: ['Deep learning surrogates', 'Flood forecasting', 'SWAT-MODFLOW coupling']
   }
 ];
 
@@ -359,11 +359,13 @@ const PUBS = [
   { y: 2024, theme: 'safety', title: 'XGBoost-SHAP and unobserved heterogeneity modelling of temporal multivehicle truck-involved crash severity patterns', authors: 'W. Laphrom, C. Se, T. Champahom, S. Jomnonkwao, W. Wipulanusat, T. Satiennam, V. Ratanavaraha', venue: 'Civil Engineering Journal', type: 'Journal' },
   { y: 2024, theme: 'safety', title: 'Tree-based approaches to understanding factors influencing crash severity across roadway classes: a Thailand case study', authors: 'T. Champahom, C. Se, F. Watcharamaisakul, S. Jomnonkwao, A. Karoonsoontawong, V. Ratanavaraha', venue: 'IATSS Research', type: 'Journal' },
   { y: 2024, theme: 'safety', title: 'Modeling motorcycle crash-injury severity using explainable data-driven approaches', authors: 'C. Se, J. Sunkpho, W. Wipulanusat, K. Tantisevi, T. Champahom, V. Ratanavaraha', venue: 'Transportation Letters', type: 'Journal' },
-  { y: 2025, theme: 'water', title: 'Groundwater vulnerability assessment using a modified DRASTIC method with integrated hydrological modelling', authors: 'C. Petpongpan, C. Ekkawatpanit, D. Kositgittiwong', venue: 'Groundwater for Sustainable Development', type: 'Journal' },
-  { y: 2024, theme: 'water', title: 'Integrated management of surface water and groundwater for climate change adaptation', authors: 'C. Petpongpan, C. Ekkawatpanit, S. H. Gheewala, S. Visessri, P. Saraphirom, D. Kositgittiwong, S. Kazama', venue: 'Environment, Development and Sustainability', type: 'Journal' },
-  { y: 2022, theme: 'water', title: 'Evaluating surface water&ndash;groundwater interactions in consequence of changes in climate and groundwater extraction', authors: 'C. Petpongpan, C. Ekkawatpanit, R. T. Bailey, D. Kositgittiwong, P. Saraphirom', venue: 'Water Resources Management', type: 'Journal' },
-  { y: 2021, theme: 'water', title: 'Landslide risk assessment using a hydrological model in the Upper Yom River Basin, Thailand', authors: 'C. Petpongpan, C. Ekkawatpanit, D. Kositgittiwong', venue: 'CATENA', type: 'Journal' },
-  { y: 2020, theme: 'water', title: 'Climate change impact on surface water and groundwater recharge in Northern Thailand', authors: 'C. Petpongpan, C. Ekkawatpanit, D. Kositgittiwong', venue: 'Water, 12(4)', type: 'Journal' },
+  { y: 2026, theme: 'safety', title: 'Temporal instability of highway pedestrian crash severity: comparative analysis of machine learning models', authors: 'P. Wisutwattanasak, C. Se, S. Sum, T. Champahom, V. Ratanavaraha, S. Jomnonkwao', venue: 'Transportation Research Interdisciplinary Perspectives', type: 'Journal' },
+  { y: 2025, theme: 'safety', title: 'Deep learning vs. gradient boosting: optimizing transport energy forecasts in Thailand through LSTM and XGBoost', authors: 'T. Champahom, C. Banyong, T. Janhuaton, C. Se, F. Watcharamaisakul, V. Ratanavaraha, S. Jomnonkwao', venue: 'Energies', type: 'Journal' },
+  { y: 2025, theme: 'safety', title: 'Pickup truck crash severity analysis via machine learning: policy insights for developing countries', authors: 'C. Se, T. Champahom, S. Jomnonkwao, T. Boonyoo, A. Karoonsoontawong, V. Ratanavaraha', venue: 'International Journal of Injury Control and Safety Promotion', type: 'Journal' },
+  { y: 2025, theme: 'safety', title: 'XGBoost-based prediction model for train passenger numbers: evaluating the effect of the COVID-19 pandemic', authors: 'C. Se, T. Champahom, S. Jomnonkwao, V. Ratanavaraha', venue: 'Communications in Computer and Information Science', type: 'Conference' },
+  { y: 2022, theme: 'safety', title: 'Motorcyclist injury severity analysis: a comparison of artificial neural networks and a random parameter model with heterogeneity in means and variances', authors: 'C. Se, T. Champahom, S. Jomnonkwao, V. Ratanavaraha', venue: 'International Journal of Injury Control and Safety Promotion', type: 'Journal' },
+  { y: 2026, theme: 'water', title: 'Enhancing flood forecasting with deep learning: a scalable alternative to traditional hydrodynamic models', authors: 'W. Duangkhwan, C. Ekkawatpanit, C. Petpongpan, D. Kositgittiwong, S. Kazama, Y. Hiraga, C. Jaturapitakkul', venue: 'Environmental Modelling &amp; Software', type: 'Journal' },
+  { y: 2026, theme: 'water', title: 'Enhancing groundwater level prediction in data-scarce regions: coupling SWAT-MODFLOW with cluster-based deep learning', authors: 'W. Duangkwan, C. Petpongpan, C. Ekkawatpanit, D. Kositgittiwong, C. Jaturapitakkul', venue: 'Research Square preprint', type: 'Preprint', url: 'https://doi.org/10.21203/rs.3.rs-8440121/v1' },
   { y: 2015, theme: 'legacy', title: 'High internal pressure induced fracture patterns in rock masses surrounding caverns', authors: 'P. Jongpradist, J. Tunsakul, W. Kongkitkul, N. Fadsiri, G. Arangelovski, S. Youwai', venue: 'Engineering Geology, 197', type: 'Journal' },
   { y: 2013, theme: 'legacy', title: 'Development of tunneling influence zones for adjacent pile foundations by numerical analyses', authors: 'P. Jongpradist, T. Kaewsri, A. Sawatparnich, S. Suwansawat, S. Youwai, et al.', venue: 'Tunnelling and Underground Space Technology, 34', type: 'Journal' },
   { y: 2003, theme: 'legacy', title: 'Strength and deformation characteristics of shredded rubber tire sand mixtures', authors: 'S. Youwai, D. T. Bergado', venue: 'Canadian Geotechnical Journal, 40(2)', type: 'Journal' }
