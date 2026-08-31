@@ -471,11 +471,14 @@ img { max-width: 100%; }
 .partners-h { font-size: clamp(1.5rem, 2.6vw, 1.95rem); margin-bottom: .7rem; }
 .partners-band .sec-lede { max-width: 58ch; margin-bottom: 34px; }
 
+/* Flex rather than grid so an odd count centres its last row instead of
+   stranding a tile on the left. Adding or removing a logo needs no retuning. */
 .partner-grid {
   list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;
 }
 .partner {
+  flex: 1 1 250px; max-width: 320px; min-width: 220px;
   display: flex; flex-direction: column; align-items: center; gap: 12px;
   padding: 22px 18px 18px; text-align: center;
   background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--r);
@@ -489,11 +492,17 @@ img { max-width: 100%; }
   height: 52px; width: auto; max-width: 100%; object-fit: contain; display: block;
   background: #fff; border-radius: 8px; padding: 8px 14px; box-sizing: content-box;
 }
+/* Square and upright marks look small next to a wide wordmark at the same
+   height, so they are given more of it. This matches optical size, not box size. */
+.partner img.sq { height: 68px; }
+
 .partner span { font-size: .78rem; color: var(--ink-3); line-height: 1.35; }
 
 @media (max-width: 460px) {
-  .partner-grid { grid-template-columns: repeat(2, 1fr); }
+  .partner { flex-basis: 130px; min-width: 130px; }
   .partner img { height: 38px; }
+  .partner img.sq { height: 50px; }
+  .partner span { font-size: .72rem; }
 }
 
 /* ── footer ───────────────────────────────────────────────── */

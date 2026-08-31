@@ -173,7 +173,7 @@ The site uses the KMUTT one. Confirm with him which is current.
 
 ## Partner logos
 
-`assets/img/partners/` holds six supplied logos, trimmed of their borders and normalised
+`assets/img/partners/` holds seven supplied logos, trimmed of their borders and normalised
 to 160 px tall. They are shown on a white plate in both themes rather than being
 recoloured or inverted, since they are third-party trademarks and several already carry a
 white ground.
@@ -183,9 +183,13 @@ railway system technology, was cut through mid-glyph. It is cropped above that l
 the mark reads cleanly but the institute's full name is not shown. A complete logo file
 would fix this.
 
-The grid track is set to 290 px so that exactly three tiles fit per row at the wrap
-width. Six logos therefore land as a clean 3 x 2. Adding a seventh will leave a gap, so
-adjust the track or the count together.
+The tiles are laid out with flex and a centred last row, so any number of logos wraps
+tidily and adding one needs no adjustment.
+
+Two display heights are in play. Wide wordmarks sit at 52 px. Square and upright marks
+carry the class `sq` and sit at 68 px, because at a shared height they read as much
+smaller than a wordmark beside them. Tag a new logo `sq` if it is roughly square or
+taller than it is wide.
 
 Logos assert a relationship. Keep this section accurate if a collaboration ends.
 
