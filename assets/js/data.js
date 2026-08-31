@@ -425,6 +425,7 @@ const PUBS = [
 /* ── Software ───────────────────────────────────────────────── */
 
 const REPOS = [
+  { name: 'TigrimOSR', stars: 75, lang: 'Rust', desc: 'Native desktop AI assistant in Rust with an egui interface. One self-contained binary, no runtime to install.' },
   { name: 'DINOV3-YOLOV12', stars: 318, lang: 'Python', desc: 'DINOv3 self-supervised features plus YOLOv12 detection in one repo. Built for datasets of a few hundred labelled images.' },
   { name: 'SAM3_LoRA', stars: 254, lang: 'Python', desc: 'Fine-tune Segment Anything 3 with LoRA on image datasets. Single-GPU setup.' },
   { name: 'Tigrimos', stars: 110, lang: 'TypeScript', desc: 'Self-hosted AI workspace with chat, code execution and parallel multi-agent orchestration.' },

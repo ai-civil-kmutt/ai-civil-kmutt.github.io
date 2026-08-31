@@ -171,6 +171,16 @@ employer, and `0000-0002-8896-8168` from 2020, which lists nothing. Neither has 
 attached and his papers carry no ORCID, so the two cannot be told apart from the outside.
 The site uses the KMUTT one. Confirm with him which is current.
 
+## Featured software
+
+The software section opens with a highlighted card for TigrimOSR, linking to
+<https://tigrimosr.github.io>. Its mark lives in `assets/img/software/` and, like the
+partner logos, sits on a white plate rather than being inverted for the dark theme, since
+the artwork is dark navy.
+
+The card is hand-written in `index.html` rather than generated, because it is a
+deliberate one-off. TigrimOSR also appears in the ordinary `REPOS` list below it.
+
 ## Partner logos
 
 `assets/img/partners/` holds nine supplied logos, trimmed of their borders and normalised
