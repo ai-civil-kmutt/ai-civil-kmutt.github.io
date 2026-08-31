@@ -173,7 +173,7 @@ The site uses the KMUTT one. Confirm with him which is current.
 
 ## Partner logos
 
-`assets/img/partners/` holds five supplied logos, trimmed of their borders and normalised
+`assets/img/partners/` holds six supplied logos, trimmed of their borders and normalised
 to 160 px tall. They are shown on a white plate in both themes rather than being
 recoloured or inverted, since they are third-party trademarks and several already carry a
 white ground.
@@ -182,6 +182,10 @@ The RTDI source file was itself clipped: the bottom line of Thai text, the words
 railway system technology, was cut through mid-glyph. It is cropped above that line, so
 the mark reads cleanly but the institute's full name is not shown. A complete logo file
 would fix this.
+
+The grid track is set to 290 px so that exactly three tiles fit per row at the wrap
+width. Six logos therefore land as a clean 3 x 2. Adding a seventh will leave a gap, so
+adjust the track or the count together.
 
 Logos assert a relationship. Keep this section accurate if a collaboration ends.
 

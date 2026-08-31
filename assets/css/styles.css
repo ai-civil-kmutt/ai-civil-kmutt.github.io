@@ -473,7 +473,7 @@ img { max-width: 100%; }
 
 .partner-grid {
   list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px;
 }
 .partner {
   display: flex; flex-direction: column; align-items: center; gap: 12px;
@@ -486,8 +486,8 @@ img { max-width: 100%; }
 /* The logos are supplied artwork, several on a white ground, so they sit on a
    white plate in both themes rather than being recoloured or inverted. */
 .partner img {
-  height: 46px; width: auto; max-width: 100%; object-fit: contain; display: block;
-  background: #fff; border-radius: 8px; padding: 8px 12px; box-sizing: content-box;
+  height: 52px; width: auto; max-width: 100%; object-fit: contain; display: block;
+  background: #fff; border-radius: 8px; padding: 8px 14px; box-sizing: content-box;
 }
 .partner span { font-size: .78rem; color: var(--ink-3); line-height: 1.35; }
 
