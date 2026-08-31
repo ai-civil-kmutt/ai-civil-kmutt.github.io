@@ -59,6 +59,22 @@ const THEMES = [
     title: 'Geophysics and non-destructive testing',
     body: 'Faster ground models from surface measurements. We invert Rayleigh dispersion curves for shear-wave velocity profiles, predict critical pavement strains straight from falling weight deflectometer data without backcalculation, and fuse multi-view ground penetrating radar to find cavities.',
     tags: ['MASW / SASW', 'FWD', 'GPR']
+  },
+  {
+    id: 'safety',
+    short: 'Road safety',
+    n: '08',
+    title: 'Road safety and transport analytics',
+    body: 'Crash records are messy and the factors behind them move over time. We use tree-based learners and SHAP attribution to show which factors drive injury severity, and random-parameter models to carry the heterogeneity those methods leave behind. Parallel work forecasts travel demand, rail ridership and electric vehicle uptake.',
+    tags: ['Crash severity', 'SHAP attribution', 'Travel demand']
+  },
+  {
+    id: 'water',
+    short: 'Water resources',
+    n: '09',
+    title: 'Water resources and climate adaptation',
+    body: 'Surface water and groundwater are one system, so we model them as one. Coupled hydrological and groundwater models over Thai river basins project how climate change shifts recharge, extremes and landslide risk, and test abstraction and adaptation strategies against those projections.',
+    tags: ['Coupled SW\u2013GW models', 'Climate projection', 'Basin management']
   }
 ];
 
@@ -338,6 +354,16 @@ const PUBS = [
   { y: 2024, theme: 'vision', title: 'A fused deep learning expert system for road damage detection and size analysis', authors: 'S. Youwai, A. Chaiyaphat, P. Chaipetch', venue: 'Int. Conf. on Intelligent Computing and Next Generation Networks', type: 'Conference' },
   { y: 2024, theme: 'xai', title: 'Explainable artificial intelligence (XAI) for predicting asphalt concrete stiffness and rutting resistance', authors: 'W. Kongkitkul, S. Youwai, S. Khamsoy, M. Feungfung', venue: 'arXiv preprint', type: 'Preprint' },
   { y: 2024, theme: 'vision', title: 'YOLO9tr: a lightweight model for pavement damage detection utilizing a generalized efficient layer aggregation network and attention mechanism', authors: 'S. Youwai, A. Chaiyaphat, P. Chaipetch', venue: 'Journal of Real-Time Image Processing, 21(5)', type: 'Journal' },
+  { y: 2025, theme: 'safety', title: 'A random forest and SHAP-based analysis of motorcycle crash severity in Thailand', authors: 'S. Sum, C. Se, T. Champahom, S. Jomnonkwao, S. Sinha, V. Ratanavaraha', venue: 'Transportation Engineering', type: 'Journal' },
+  { y: 2025, theme: 'safety', title: 'SHAP-based convolutional neural network modeling for intersection crash severity', authors: 'J. Sunkpho, C. Se, W. Wipulanusat, V. Ratanavaraha', venue: 'IATSS Research', type: 'Journal' },
+  { y: 2024, theme: 'safety', title: 'XGBoost-SHAP and unobserved heterogeneity modelling of temporal multivehicle truck-involved crash severity patterns', authors: 'W. Laphrom, C. Se, T. Champahom, S. Jomnonkwao, W. Wipulanusat, T. Satiennam, V. Ratanavaraha', venue: 'Civil Engineering Journal', type: 'Journal' },
+  { y: 2024, theme: 'safety', title: 'Tree-based approaches to understanding factors influencing crash severity across roadway classes: a Thailand case study', authors: 'T. Champahom, C. Se, F. Watcharamaisakul, S. Jomnonkwao, A. Karoonsoontawong, V. Ratanavaraha', venue: 'IATSS Research', type: 'Journal' },
+  { y: 2024, theme: 'safety', title: 'Modeling motorcycle crash-injury severity using explainable data-driven approaches', authors: 'C. Se, J. Sunkpho, W. Wipulanusat, K. Tantisevi, T. Champahom, V. Ratanavaraha', venue: 'Transportation Letters', type: 'Journal' },
+  { y: 2025, theme: 'water', title: 'Groundwater vulnerability assessment using a modified DRASTIC method with integrated hydrological modelling', authors: 'C. Petpongpan, C. Ekkawatpanit, D. Kositgittiwong', venue: 'Groundwater for Sustainable Development', type: 'Journal' },
+  { y: 2024, theme: 'water', title: 'Integrated management of surface water and groundwater for climate change adaptation', authors: 'C. Petpongpan, C. Ekkawatpanit, S. H. Gheewala, S. Visessri, P. Saraphirom, D. Kositgittiwong, S. Kazama', venue: 'Environment, Development and Sustainability', type: 'Journal' },
+  { y: 2022, theme: 'water', title: 'Evaluating surface water&ndash;groundwater interactions in consequence of changes in climate and groundwater extraction', authors: 'C. Petpongpan, C. Ekkawatpanit, R. T. Bailey, D. Kositgittiwong, P. Saraphirom', venue: 'Water Resources Management', type: 'Journal' },
+  { y: 2021, theme: 'water', title: 'Landslide risk assessment using a hydrological model in the Upper Yom River Basin, Thailand', authors: 'C. Petpongpan, C. Ekkawatpanit, D. Kositgittiwong', venue: 'CATENA', type: 'Journal' },
+  { y: 2020, theme: 'water', title: 'Climate change impact on surface water and groundwater recharge in Northern Thailand', authors: 'C. Petpongpan, C. Ekkawatpanit, D. Kositgittiwong', venue: 'Water, 12(4)', type: 'Journal' },
   { y: 2015, theme: 'legacy', title: 'High internal pressure induced fracture patterns in rock masses surrounding caverns', authors: 'P. Jongpradist, J. Tunsakul, W. Kongkitkul, N. Fadsiri, G. Arangelovski, S. Youwai', venue: 'Engineering Geology, 197', type: 'Journal' },
   { y: 2013, theme: 'legacy', title: 'Development of tunneling influence zones for adjacent pile foundations by numerical analyses', authors: 'P. Jongpradist, T. Kaewsri, A. Sawatparnich, S. Suwansawat, S. Youwai, et al.', venue: 'Tunnelling and Underground Space Technology, 34', type: 'Journal' },
   { y: 2003, theme: 'legacy', title: 'Strength and deformation characteristics of shredded rubber tire sand mixtures', authors: 'S. Youwai, D. T. Bergado', venue: 'Canadian Geotechnical Journal, 40(2)', type: 'Journal' }

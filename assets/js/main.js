@@ -144,7 +144,7 @@
   ).join('');
 
   const boldNames = (authors) =>
-    authors.replace(/([A-Z]\.\s(?:[A-Z]\.\s)?(?:Youwai|Jongpradist|Kongkitkul|Leelataviwat|Tangchirapat|Phutthananon|Petpongpan|Kitkobsin|Jariyatatsakorn))/g, '<b>$1</b>');
+    authors.replace(/([A-Z]\.\s(?:[A-Z]\.\s)?(?:Youwai|Jongpradist|Kongkitkul|Leelataviwat|Tangchirapat|Phutthananon|Petpongpan|Kitkobsin|Jariyatatsakorn|Se)\b)/g, '<b>$1</b>');
 
   function renderPubs(filter) {
     const rows = PUBS.filter((p) => filter === 'all' || p.theme === filter);

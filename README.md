@@ -29,7 +29,7 @@ Everything on the page comes from `assets/js/data.js`. Each block is a plain arr
 
 | Constant   | Controls                                         |
 |------------|--------------------------------------------------|
-| `THEMES`   | the seven research theme cards                    |
+| `THEMES`   | the nine research theme cards                     |
 | `LEAD`     | the principal investigator panel                  |
 | `PEOPLE`   | the other principal investigators and researchers |
 | `PROJECTS` | current project cards                             |
