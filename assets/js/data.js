@@ -458,6 +458,15 @@ const COURSES = [
 
 const FEATURED = [
   {
+    name: 'TigrimOS',
+    logo: 'assets/img/software/tigrimos.png',
+    plate: 'dark',
+    url: 'https://tigrimos.github.io',
+    site: 'tigrimos.github.io',
+    desc: 'A self-hosted AI desktop application. It runs agents in parallel, reaches remote agents on other machines, sandboxes what they execute, and installs skills from a marketplace. Feedback from the user becomes a new skill, so agents improve run after run. Nothing leaves your own network.',
+    meta: ['TypeScript', 'React', '110 stars']
+  },
+  {
     name: 'TigrimOSR',
     logo: 'assets/img/software/tigrimosr.png',
     plate: 'light',
@@ -491,7 +500,6 @@ const FEATURED = [
 const REPOS = [
   { name: 'DINOV3-YOLOV12', stars: 318, lang: 'Python', desc: 'DINOv3 self-supervised features plus YOLOv12 detection in one repo. Built for datasets of a few hundred labelled images.' },
   { name: 'SAM3_LoRA', stars: 254, lang: 'Python', desc: 'Fine-tune Segment Anything 3 with LoRA on image datasets. Single-GPU setup.' },
-  { name: 'Tigrimos', stars: 110, lang: 'TypeScript', desc: 'Self-hosted AI workspace with chat, code execution and parallel multi-agent orchestration.' },
   { name: 'DINOV3_YOLO', stars: 74, lang: 'Python', desc: 'Detection backbone combining DINOv3 representations with a YOLO head.' },
   { name: 'DinoV3-YOLO-Segment', stars: 54, lang: 'Python', desc: 'Segmentation variant of the DINOv3 + YOLO architecture.' },
   { name: 'YOLO9tr', stars: 11, lang: 'Python', desc: 'Lightweight pavement damage detector with a generalized efficient layer aggregation network and attention.' },
