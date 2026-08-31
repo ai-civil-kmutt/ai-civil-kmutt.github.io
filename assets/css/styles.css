@@ -123,11 +123,12 @@ img { max-width: 100%; }
 .nav-inner { display: flex; align-items: center; gap: 20px; height: 66px; }
 
 .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; color: inherit; margin-right: auto; }
+/* The mark is dark artwork, so it keeps a white ground in both themes,
+   the same rule the software logos follow. */
 .brand-mark {
-  width: 34px; height: 34px; flex: none; border-radius: 9px;
-  background: linear-gradient(145deg, var(--accent), #c9490c);
-  color: #fff; font-family: var(--serif); font-size: .92rem; font-weight: 600;
-  display: grid; place-items: center; letter-spacing: .01em;
+  height: 46px; width: auto; flex: none; border-radius: 10px;
+  background: #fff; border: 1px solid var(--line);
+  padding: 6px 10px; box-sizing: border-box;
 }
 .brand-text { display: flex; flex-direction: column; line-height: 1.2; }
 .brand-text strong { font-size: .94rem; font-weight: 600; letter-spacing: -.01em; }
