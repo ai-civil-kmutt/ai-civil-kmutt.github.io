@@ -171,6 +171,16 @@ employer, and `0000-0002-8896-8168` from 2020, which lists nothing. Neither has 
 attached and his papers carry no ORCID, so the two cannot be told apart from the outside.
 The site uses the KMUTT one. Confirm with him which is current.
 
+## Teaching
+
+Open courses come from the `COURSES` array in `data.js` and render into the Teaching
+section. Each entry carries the playlist URL plus one `sample` lecture, linked directly so
+a visitor can start watching without committing to a series.
+
+Individual lecture titles are not listed. YouTube does not serve playlist contents to
+automated requests, so they would have to be typed by hand and would drift as the course
+grows.
+
 ## Featured software
 
 The software section opens with cards for projects that have their own site and mark.

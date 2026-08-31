@@ -177,6 +177,26 @@
     renderPubs(btn.dataset.f);
   });
 
+  /* ── teaching ──────────────────────────────────────────── */
+  const PLAY = '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.8 12 4.8 12 4.8s-5.9 0-7.6.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.4 7.6.4 7.6.4s5.9 0 7.6-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8zM10 15.2V8.8l5.2 3.2z"/></svg>';
+
+  $('#course-list').innerHTML = COURSES.map((c) => `
+    <article class="course reveal">
+      <div class="course-icon" aria-hidden="true">${PLAY}</div>
+      <div class="course-body">
+        <div class="course-top">
+          <h3>${c.title}</h3>
+          <span class="pill-term">${c.term}</span>
+        </div>
+        <p class="course-channel">${c.channel}</p>
+        <p>${c.desc}</p>
+        <div class="course-links">
+          <a class="btn btn-primary" href="${c.url}" target="_blank" rel="noopener">Watch the playlist</a>
+          ${c.sample ? `<a class="course-sample" href="${c.sample.url}" target="_blank" rel="noopener">Start with &ldquo;${c.sample.label}&rdquo; &rarr;</a>` : ''}
+        </div>
+      </div>
+    </article>`).join('');
+
   /* ── featured software ─────────────────────────────────── */
   $('#sw-features').innerHTML = FEATURED.map((f) => `
     <a class="sw-feature" href="${f.url}" target="_blank" rel="noopener">

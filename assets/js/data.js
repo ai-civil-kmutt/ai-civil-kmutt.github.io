@@ -422,6 +422,22 @@ const PUBS = [
   { y: 2003, theme: 'legacy', title: 'Strength and deformation characteristics of shredded rubber tire sand mixtures', authors: 'S. Youwai, D. T. Bergado', venue: 'Canadian Geotechnical Journal, 40(2)', type: 'Journal' }
 ];
 
+/* ── Teaching ───────────────────────────────────────────────
+   Open courses. `url` is the playlist; `sample` is one lecture
+   linked directly so a visitor can start without committing.
+   ─────────────────────────────────────────────────────────── */
+
+const COURSES = [
+  {
+    title: 'Engineering Application of AI',
+    term: 'Winter 2026',
+    channel: 'Civil Engineering Online Course',
+    url: 'https://www.youtube.com/playlist?list=PL44jd2bsjPZaWepZSwxxsZQnkFjwejirf',
+    desc: 'A recorded lecture series on putting machine learning to work on engineering problems, following the same ground the group publishes on. Free to watch, no enrolment.',
+    sample: { label: 'Explainable AI', url: 'https://youtu.be/pm9BT2v4KXQ' }
+  }
+];
+
 /* ── Featured software ──────────────────────────────────────
    Projects with their own site and mark. `plate` says which
    ground the logo artwork needs: 'light' for dark artwork,
