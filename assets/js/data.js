@@ -463,7 +463,7 @@ const FEATURED = [
     plate: 'dark',
     url: 'https://tigrimos.github.io',
     site: 'tigrimos.github.io',
-    desc: 'A self-hosted AI desktop application. It runs agents in parallel, reaches remote agents on other machines, sandboxes what they execute, and installs skills from a marketplace. Feedback from the user becomes a new skill, so agents improve run after run. Nothing leaves your own network.',
+    desc: 'A self-hosted agent harness for the desktop. It runs agents in parallel, reaches remote agents on other machines, sandboxes what they execute, and installs skills from a marketplace. Feedback from the user becomes a new skill, so agents improve run after run. Nothing leaves your own network.',
     meta: ['TypeScript', 'React', 'MIT', '110 stars']
   },
   {
@@ -472,7 +472,7 @@ const FEATURED = [
     plate: 'light',
     url: 'https://tigrimosr.github.io',
     site: 'tigrimosr.github.io',
-    desc: 'A native desktop AI assistant written entirely in Rust, using egui for the interface. It starts faster and uses less memory than the Python and Node.js original, and ships as one self-contained binary with no runtime to install.',
+    desc: 'A native desktop agent harness written entirely in Rust, using egui for the interface. It starts faster and uses less memory than the Python and Node.js original, and ships as one self-contained binary with no runtime to install.',
     meta: ['Rust', 'Apache&#8209;2.0', '75 stars']
   },
   {
