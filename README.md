@@ -108,9 +108,13 @@ headroom under the stylesheet zoom described below.
 The rest are the official staff photographs from the Department of Civil Engineering
 directory at <https://ce.kmutt.ac.th/en/staffs-teachers-en/>, downloaded in August 2026.
 
-Two people have no portrait on the department page, because they are not faculty:
-Dr. Kosit Jariyatatsakorn and Tipok Kitkobsin. Their cards fall back to an initials
-avatar. To add a photo, drop a file into `assets/img/people/` and set the `photo` key
+`tipok-kitkobsin.jpg` was supplied separately. The source was 224x225, so it is upscaled
+about 2.7x to reach 400x600 and lightly sharpened. It holds up at the 74x92 card size but
+is softer than the rest, and it is a casual photograph rather than a studio portrait.
+Replacing it with a higher-resolution image would be an improvement.
+
+Dr. Kosit Jariyatatsakorn still has no portrait, since he is not faculty and so is not on
+the department page. His card falls back to an initials avatar. To add a photo, drop a file into `assets/img/people/` and set the `photo` key
 on their entry in `data.js`. Any card whose image fails to load falls back to initials
 automatically.
 

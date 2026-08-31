@@ -262,6 +262,7 @@ const PEOPLE = [
   },
   {
     name: 'Tipok Kitkobsin',
+    photo: 'assets/img/people/tipok-kitkobsin.jpg',
     rg: 'Tipok-Kitkobsin',
     orcid: '0009-0000-6783-4147',
     scopus: '59656639400',
