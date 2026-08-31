@@ -113,8 +113,11 @@ about 2.7x to reach 400x600 and lightly sharpened. It holds up at the 74x92 card
 is softer than the rest, and it is a casual photograph rather than a studio portrait.
 Replacing it with a higher-resolution image would be an improvement.
 
-Dr. Kosit Jariyatatsakorn still has no portrait, since he is not faculty and so is not on
-the department page. His card falls back to an initials avatar. To add a photo, drop a file into `assets/img/people/` and set the `photo` key
+`kosit-jariyatatsakorn.jpg` was also supplied separately, from a 512x512 source, so it
+needed only a 1.17x upscale and matches the others in sharpness.
+
+Every member now has a portrait. The initials fallback stays in place for anyone added
+later, and for any image that fails to load. To add a photo, drop a file into `assets/img/people/` and set the `photo` key
 on their entry in `data.js`. Any card whose image fails to load falls back to initials
 automatically.
 

@@ -249,6 +249,7 @@ const PEOPLE = [
   },
   {
     name: 'Dr. Kosit Jariyatatsakorn',
+    photo: 'assets/img/people/kosit-jariyatatsakorn.jpg',
     rg: 'Kosit_Jariyatatsakorn',
     orcid: '0000-0003-4912-850X',
     scopus: '58104830600',
