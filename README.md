@@ -143,6 +143,13 @@ employer, and `0000-0002-8896-8168` from 2020, which lists nothing. Neither has 
 attached and his papers carry no ORCID, so the two cannot be told apart from the outside.
 The site uses the KMUTT one. Confirm with him which is current.
 
+## Funding credit
+
+The footer carries `Research supported by API credits from Anthropic`, linking to
+anthropic.com. It is a specific acknowledgement of compute credits, not a claim of
+sponsorship or partnership. Keep the wording accurate if the arrangement changes: it sits
+in the `.foot-support` paragraph in `index.html`.
+
 ## Citation metrics
 
 The `metric` field on each person in `data.js` carries their citation count and h-index.
