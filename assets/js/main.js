@@ -59,6 +59,7 @@
     const out = [];
     if (p.orcid) out.push({ label: 'ORCID', url: 'https://orcid.org/' + p.orcid, cls: ' id-orcid' });
     if (p.scopus) out.push({ label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=' + p.scopus, cls: ' id-scopus' });
+    if (p.rg) out.push({ label: 'ResearchGate', url: 'https://www.researchgate.net/profile/' + p.rg, cls: ' id-rg' });
     return out;
   };
 

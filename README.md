@@ -121,19 +121,34 @@ roughly 15 percent headroom above the head or the crown gets clipped.
 
 ## Author identifiers
 
-Each person carries an `orcid` and, where known, a `scopus` field in `data.js`. The link
-pills are generated from those ids, so adding one is a single line.
+Each person carries an `orcid` and, where known, `scopus` and `rg` fields in `data.js`.
+The link pills are generated from those ids, so adding one is a single line. `rg` is the
+ResearchGate profile slug, the part after `/profile/`.
 
 All ten ORCID iDs were resolved against the ORCID public API and each returns the
 expected name. The seven Scopus Author IDs were taken from the researchers' own ORCID
 records, where they are self-asserted external identifiers.
 
-Three people have no Scopus link yet, because Scopus author ids are not public without a
-subscription and none of these three has published theirs through ORCID:
+Five people have no Scopus link. Scopus author ids are not public without a subscription,
+none of the five has published theirs through ORCID, and none has a ScienceDirect author
+page, which is the other route that exposes the id:
 
 - Sompote Youwai
 - Chana Phutthananon
 - Chanchai Petpongpan
+- Chainarong Athisakul
+- Peerasit Mahasuwanchai
+
+Four have no ResearchGate link, because no profile for them surfaced in search and
+ResearchGate answers 403 to any automated request, so a guessed URL cannot be checked
+before publishing it:
+
+- Chamroeun Se
+- Chainarong Athisakul
+- Peerasit Mahasuwanchai
+- Tipok Kitkobsin
+
+For either, send the profile URL and the pill appears from one field.
 
 To add one, look up the author on Scopus, copy the `authorId` from the profile URL, and
 set `scopus: '<id>'` on that person in `data.js`.

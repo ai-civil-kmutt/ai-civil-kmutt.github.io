@@ -82,6 +82,7 @@ const THEMES = [
 
 const LEAD = {
   name: 'Assoc. Prof. Dr. Sompote Youwai',
+  rg: 'Sompote-Youwai',
   role: 'Principal Investigator &middot; Group Lead',
   division: 'Geotechnical Engineering',
   email: 'sompote.you@kmutt.ac.th',
@@ -105,6 +106,7 @@ const LEAD = {
 const PEOPLE = [
   {
     name: 'Prof. Dr. Pornkasem Jongpradist',
+    rg: 'Pornkasem-Jongpradist',
     orcid: '0000-0003-4234-0575',
     scopus: '35796870800',
     photo: 'assets/img/people/pornkasem-jongpradist.jpg',
@@ -122,6 +124,7 @@ const PEOPLE = [
   },
   {
     name: 'Prof. Dr. Warat Kongkitkul',
+    rg: 'Warat-Kongkitkul',
     orcid: '0000-0003-4075-0984',
     scopus: '8832418400',
     photo: 'assets/img/people/warat-kongkitkul.jpg',
@@ -139,6 +142,7 @@ const PEOPLE = [
   },
   {
     name: 'Prof. Dr. Sutat Leelataviwat',
+    rg: 'Sutat-Leelataviwat',
     orcid: '0000-0001-9123-8126',
     scopus: '6506956958',
     photo: 'assets/img/people/sutat-leelataviwat.jpg',
@@ -150,12 +154,12 @@ const PEOPLE = [
     bio: 'Seismic design, structural dynamics and earthquake engineering. Brings structural performance assessment into the group&rsquo;s liquefaction and hazard modelling work.',
     metric: '1,000+ citations &middot; h-index 17',
     links: [
-      { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Sutat-Leelataviwat' },
       { label: 'KIRIM', url: 'https://kirim.kmutt.ac.th/converis/portal/detail/Person/54140039?lang=en_GB' }
     ]
   },
   {
     name: 'Prof. Dr. Weerachart Tangchirapat',
+    rg: 'Weerachart-Tangchirapat',
     orcid: '0000-0002-4917-1367',
     scopus: '15133064100',
     photo: 'assets/img/people/weerachart-tangchirapat.jpg',
@@ -173,6 +177,7 @@ const PEOPLE = [
   },
   {
     name: 'Asst. Prof. Dr. Chana Phutthananon',
+    rg: 'Chana-Phutthananon',
     orcid: '0009-0004-6718-0728',
     photo: 'assets/img/people/chana-phutthananon.jpg',
     email: 'chana.phu@kmutt.ac.th',
@@ -181,12 +186,11 @@ const PEOPLE = [
     division: 'Geotechnical Engineering',
     bio: 'Ground improvement, pile-supported embankments, and tunnelling effects on adjacent structures. Leads the rubber-modified asphalt and pavement overlay studies.',
     metric: '540+ citations &middot; h-index 12',
-    links: [
-      { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Chana-Phutthananon' }
-    ]
+    links: []
   },
   {
     name: 'Asst. Prof. Dr. Chanchai Petpongpan',
+    rg: 'Chanchai-Petpongpan-2',
     orcid: '0009-0007-2545-1683',
     photo: 'assets/img/people/chanchai-petpongpan.jpg',
     email: 'chanchai.pet@kmutt.ac.th',
@@ -196,9 +200,7 @@ const PEOPLE = [
     note: 'Head of Water Resources Engineering Programme',
     bio: 'Hydrological and hydraulic modelling, groundwater&ndash;surface water interaction and water resources management. Extends the group&rsquo;s machine learning methods to catchment-scale problems.',
     metric: '100+ citations &middot; h-index 6',
-    links: [
-      { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Chanchai-Petpongpan-2' }
-    ]
+    links: []
   },
   {
     name: 'Assoc. Prof. Dr. Chainarong Athisakul',
@@ -247,6 +249,7 @@ const PEOPLE = [
   },
   {
     name: 'Dr. Kosit Jariyatatsakorn',
+    rg: 'Kosit_Jariyatatsakorn',
     orcid: '0000-0003-4912-850X',
     scopus: '58104830600',
     email: 'kosit.jar@kmutt.ac.th',
@@ -255,9 +258,7 @@ const PEOPLE = [
     division: 'Geotechnical Engineering',
     bio: 'Temperature-dependent behaviour of sands, creep deformation and stress relaxation under drained triaxial compression. Supplies the constitutive datasets behind the physics-informed models.',
     metric: 'Creep &amp; rate effects',
-    links: [
-      { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Kosit_Jariyatatsakorn' }
-    ]
+    links: []
   },
   {
     name: 'Tipok Kitkobsin',

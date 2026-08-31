@@ -315,12 +315,13 @@ img { max-width: 100%; }
 
 /* Identifier pills carry a small brand dot so they read apart from the
    profile links without shouting. */
-.p-links .id-orcid, .p-links .id-scopus { display: inline-flex; align-items: center; gap: 6px; }
-.p-links .id-orcid::before, .p-links .id-scopus::before {
+.p-links .id-orcid, .p-links .id-scopus, .p-links .id-rg { display: inline-flex; align-items: center; gap: 6px; }
+.p-links .id-orcid::before, .p-links .id-scopus::before, .p-links .id-rg::before {
   content: ''; width: 6px; height: 6px; border-radius: 50%; flex: none;
 }
 .p-links .id-orcid::before  { background: #a6ce39; }
 .p-links .id-scopus::before { background: #e9711c; }
+.p-links .id-rg::before     { background: #00b0a0; }
 
 /* ── avatars ──────────────────────────────────────────────── */
 
