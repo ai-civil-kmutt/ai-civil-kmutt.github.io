@@ -139,14 +139,13 @@ page, which is the other route that exposes the id:
 - Chainarong Athisakul
 - Peerasit Mahasuwanchai
 
-Four have no ResearchGate link, because no profile for them surfaced in search and
+Three have no ResearchGate link, because no profile for them surfaced in search and
 ResearchGate answers 403 to any automated request, so a guessed URL cannot be checked
 before publishing it:
 
 - Chamroeun Se
 - Chainarong Athisakul
 - Peerasit Mahasuwanchai
-- Tipok Kitkobsin
 
 For either, send the profile URL and the pill appears from one field.
 
