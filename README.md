@@ -5,6 +5,22 @@ University of Technology Thonburi.
 
 Static site. No build step, no dependencies. Open `index.html` or serve the folder.
 
+## Cache busting
+
+GitHub Pages serves assets with `cache-control: max-age=600`, so a browser can keep
+showing stale CSS or JS for ten minutes after a deploy, and longer if it has already
+cached them. The CSS and JS links in `index.html` therefore carry a content hash:
+
+    assets/js/main.js?v=130949dd
+
+Run this whenever an asset changed, before committing:
+
+    python3 tools/cachebust.py
+
+It hashes each file and rewrites the query strings, so the URL changes only when the file
+does. Forgetting it does not break anything, it just means returning visitors may not see
+the change for a while.
+
 ## Local preview
 
 ```bash
