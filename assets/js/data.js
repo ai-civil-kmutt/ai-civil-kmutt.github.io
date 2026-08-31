@@ -478,7 +478,7 @@ const FEATURED = [
   {
     name: 'Tigriden',
     logo: 'assets/img/software/tigriden.png',
-    plate: 'dark',
+    plate: 'light',
     url: 'https://tigriden.github.io',
     site: 'tigriden.github.io',
     desc: 'A small end-to-end research workbench. Per-folder terminals for AI coding agents, change tracking with one-click rollback, and LaTeX, PDF and Markdown read as typeset pages rather than source.',
