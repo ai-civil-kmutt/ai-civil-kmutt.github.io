@@ -148,11 +148,11 @@
 
   function renderPubs(filter) {
     const rows = PUBS.filter((p) => filter === 'all' || p.theme === filter);
-    $('#pub-list').innerHTML = rows.map((p) => {
+    $('#pub-list').innerHTML = rows.map((p, i) => {
       const title = p.url
         ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>`
         : p.title;
-      return `<li class="pub">
+      return `<li class="pub" style="animation-delay:${Math.min(i, 12) * 35}ms">
         <span class="pub-y">${p.y}</span>
         <div>
           <p class="pub-t">${title}</p>
@@ -213,6 +213,53 @@
     });
   }, { rootMargin: '0px 0px -8% 0px' });
   $$('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 6) * 45 + 'ms'; rev.observe(el); });
+
+  /* ── reading progress ──────────────────────────────────── */
+  const bar = document.createElement('div');
+  bar.className = 'progress';
+  document.body.appendChild(bar);
+
+  let ticking = false;
+  const drawProgress = () => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + '%';
+    ticking = false;
+  };
+  addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(drawProgress); }
+  }, { passive: true });
+  drawProgress();
+
+  /* ── stat counters ─────────────────────────────────────── */
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fmt = (n) => n.toLocaleString('en-US');
+
+  function countUp(el) {
+    const target = Number(el.dataset.count);
+    if (!Number.isFinite(target)) return;
+    const suffix = /\+$/.test(el.textContent.trim()) ? '+' : '';
+    if (reduced) { el.textContent = fmt(target) + suffix; return; }
+
+    const dur = 1100;
+    const t0 = performance.now();
+    const ease = (t) => 1 - Math.pow(1 - t, 3);
+    const step = (now) => {
+      const t = Math.min((now - t0) / dur, 1);
+      el.textContent = fmt(Math.round(target * ease(t))) + suffix;
+      if (t < 1) requestAnimationFrame(step);
+    };
+    el.textContent = '0' + suffix;
+    requestAnimationFrame(step);
+  }
+
+  const counters = new IntersectionObserver((entries, obs) => {
+    entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      countUp(en.target);
+      obs.unobserve(en.target);
+    });
+  }, { rootMargin: '0px 0px -15% 0px' });
+  $$('.stats dd[data-count]').forEach((el) => counters.observe(el));
 
   /* ── footer year ───────────────────────────────────────── */
   $('#year').textContent = new Date().getFullYear();

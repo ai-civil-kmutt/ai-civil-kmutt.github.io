@@ -54,6 +54,32 @@ Then in the repository: **Settings → Pages → Source: Deploy from a branch �
 
 For a custom domain, add a `CNAME` file containing the domain and set it under Settings → Pages.
 
+## Hero artwork
+
+`index.html` inlines an SVG in the hero: a layered ground section with boreholes and a
+tunnel on the left, resolving into a neural attention structure on the right. It was
+drafted by the Codex CLI against a written brief, then reviewed and wired into the theme.
+
+It is inlined rather than linked so it can read the page's colours. It takes its strokes
+from `currentColor` and four hooks set on `.hero-art` in the stylesheet:
+
+    --art-ink  --art-accent  --art-blue  --art-line
+
+Change those and the drawing follows. Its own animation lives in a `<style>` block inside
+the SVG and is switched off under `prefers-reduced-motion`.
+
+## Motion
+
+Animation is concentrated in one block near the end of `styles.css`, marked `Motion`:
+staggered hero entrance, a drifting background grid, a sweep across the stat tiles,
+scroll reveals, staggered publication rows, portrait hover, nav underlines. `main.js`
+adds a reading-progress bar and counts the four hero statistics up from zero.
+
+All of it is disabled by the `prefers-reduced-motion: reduce` block at the end of that
+section, and the counters jump straight to their final value. Verified: with reduced
+motion forced, no pixel in the hero changes between frames and the artwork still draws in
+full.
+
 ## Photographs
 
 Portraits in `assets/img/people/` are 400x600 JPEGs, named after the person they show.

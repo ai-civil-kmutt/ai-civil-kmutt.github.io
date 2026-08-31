@@ -53,8 +53,10 @@
 <section class="hero" id="top">
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="wrap hero-inner">
+   <div class="hero-top">
+    <div class="hero-copy">
     <p class="eyebrow">Department of Civil Engineering &middot; King Mongkut's University of Technology Thonburi</p>
-    <h1>Artificial intelligence<br>for civil engineering.</h1>
+    <h1>Artificial intelligence<br> for civil engineering.</h1>
     <p class="lede">
       We build machine learning that engineers can actually use. Our work runs from
       transformer models for soil and structural behaviour, through computer vision for
@@ -65,6 +67,112 @@
       <a class="btn btn-primary" href="#research">Explore our research</a>
       <a class="btn btn-ghost" href="#software">Try the live demos</a>
     </div>
+    </div>
+    <figure class="hero-art">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="hero-title hero-desc">
+        <title id="hero-title">Ground profile transforming into a neural attention network</title>
+        <desc id="hero-desc">An abstract engineering section with boreholes, soil strata, a tunnel, sensor signals, network nodes, and an attention matrix.</desc>
+        <style>
+          .hero-line,.hero-fine,.hero-edge,.hero-signal,.hero-pulse,.hero-scan{fill:none;vector-effect:non-scaling-stroke}
+          .hero-line{stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+          .hero-fine{stroke:var(--art-line,#e2e6ec);stroke-width:1}
+          .hero-edge{stroke:currentColor;stroke-width:1.1;stroke-linecap:round;opacity:.34}
+          .hero-signal{stroke:var(--art-blue,#1f5fbf);stroke-width:1.35;stroke-linecap:round;opacity:.72}
+          .hero-pulse{stroke:var(--art-accent,#e2661a);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:2 24;animation:hero-flow 9s linear infinite}
+          .hero-node{fill:var(--art-blue,#1f5fbf);stroke:currentColor;stroke-width:1.15;transform-box:fill-box;transform-origin:center;animation:hero-breathe 7s ease-in-out infinite}
+          .hero-node-alt{fill:var(--art-accent,#e2661a)}
+          .hero-scan{stroke:var(--art-accent,#e2661a);stroke-width:1.2;opacity:.55;animation:hero-sweep 8s ease-in-out infinite}
+          @keyframes hero-flow{to{stroke-dashoffset:-104}}
+          @keyframes hero-breathe{0%,100%{opacity:.68}50%{opacity:1}}
+          @keyframes hero-sweep{0%,100%{transform:translateY(-42px);opacity:.18}50%{transform:translateY(42px);opacity:.68}}
+          @media (prefers-reduced-motion:reduce){
+            .hero-pulse,.hero-node,.hero-scan{animation:none!important}
+          }
+        </style>
+
+        <!-- Layered ground section -->
+        <g aria-hidden="true">
+          <path d="M42 154C104 140 164 160 220 148s94-2 126 10v77c-54-13-98-1-151-5S94 220 42 239Z" fill="var(--art-line,#e2e6ec)" opacity=".13"/>
+          <path d="M42 239c52-19 101-13 153-9s97-8 151 5v78c-50 13-95 5-147 8s-105 15-157 0Z" fill="var(--art-blue,#1f5fbf)" opacity=".07"/>
+          <path d="M42 321c52 15 105 3 157 0s97 5 147-8v83c-45-4-91 14-145 8s-107-2-159 13Z" fill="var(--art-accent,#e2661a)" opacity=".07"/>
+          <path d="M42 417c52-15 105-19 159-13s100-12 145-8v80H42Z" fill="var(--art-line,#e2e6ec)" opacity=".1"/>
+          <path class="hero-line" d="M42 154C104 140 164 160 220 148s94-2 126 10M42 239c52-19 101-13 153-9s97-8 151 5M42 321c52 15 105 3 157 0s97 5 147-8M42 417c52-15 105-19 159-13s100-12 145-8M42 476h304"/>
+          <path class="hero-fine" d="M59 192c35-11 64-8 92-2m-75 84c37-7 69 6 101 1m-112 87c34 6 59-8 91-5m-91 78c30-8 59-7 88-4"/>
+          <path d="m67 204 9-4m72 1 12 3m-93 92 13 3m84-42 11-2m-104 130 11-4m77 57 12 1m-95 13 10-2m95-100 12 4" fill="none" stroke="var(--art-ink,#10151f)" stroke-width="1.35" stroke-linecap="round" opacity=".48"/>
+
+          <!-- Boreholes and instrument readings -->
+          <path class="hero-line" d="M92 116v310M103 116v310M88 116h19M90 426h15"/>
+          <path class="hero-fine" d="M92 184h11M92 257h11M92 334h11M92 392h11"/>
+          <circle cx="97.5" cy="184" r="3.3" fill="var(--art-accent,#e2661a)"/>
+          <circle cx="97.5" cy="257" r="3.3" fill="var(--art-blue,#1f5fbf)"/>
+          <circle cx="97.5" cy="334" r="3.3" fill="var(--art-accent,#e2661a)"/>
+          <circle cx="97.5" cy="392" r="3.3" fill="var(--art-blue,#1f5fbf)"/>
+          <path class="hero-line" d="M179 99v260m-5-260h10m-8 260h6" opacity=".72"/>
+          <path class="hero-fine" d="M176 169h6m-6 68h6m-6 64h6"/>
+          <circle cx="179" cy="169" r="2.7" fill="var(--art-blue,#1f5fbf)"/>
+          <circle cx="179" cy="237" r="2.7" fill="var(--art-accent,#e2661a)"/>
+          <circle cx="179" cy="301" r="2.7" fill="var(--art-blue,#1f5fbf)"/>
+
+          <!-- Tunnel / foundation section -->
+          <circle cx="263" cy="374" r="48" fill="var(--art-line,#e2e6ec)" opacity=".12"/>
+          <circle class="hero-line" cx="263" cy="374" r="48"/>
+          <circle class="hero-line" cx="263" cy="374" r="38"/>
+          <path class="hero-fine" d="M227 362h72M225 385h76M263 336v76" opacity=".7"/>
+          <path d="M239 401a38 38 0 0 0 48 0" fill="none" stroke="var(--art-accent,#e2661a)" stroke-width="2.2" stroke-linecap="round"/>
+        </g>
+
+        <!-- Readings become activations -->
+        <g aria-hidden="true">
+          <path class="hero-signal" d="M101 184C203 176 254 193 357 214S474 251 536 234"/>
+          <path class="hero-signal" d="M101 257c98-11 168 10 238 26s128 5 202 34"/>
+          <path class="hero-signal" d="M101 334c113 5 173-46 252-31s111 90 188 79"/>
+          <path class="hero-signal" d="M101 392c110 17 172 3 243 35s125 9 198 3"/>
+          <path class="hero-pulse" d="M101 184C203 176 254 193 357 214S474 251 536 234"/>
+          <path class="hero-pulse" d="M101 257c98-11 168 10 238 26s128 5 202 34" style="animation-delay:-2.3s"/>
+          <path class="hero-pulse" d="M101 334c113 5 173-46 252-31s111 90 188 79" style="animation-delay:-4.7s"/>
+          <path class="hero-pulse" d="M101 392c110 17 172 3 243 35s125 9 198 3" style="animation-delay:-6.1s"/>
+        </g>
+
+        <!-- Attention matrix -->
+        <g aria-hidden="true" opacity=".9">
+          <rect x="470" y="72" width="120" height="120" rx="3" fill="none" stroke="currentColor" stroke-width="1.25"/>
+          <path class="hero-fine" d="M490 72v120M510 72v120M530 72v120M550 72v120M570 72v120M470 92h120M470 112h120M470 132h120M470 152h120M470 172h120"/>
+          <rect x="472" y="74" width="16" height="16" rx="2" fill="var(--art-blue,#1f5fbf)" opacity=".25"/>
+          <rect x="492" y="94" width="16" height="16" rx="2" fill="var(--art-accent,#e2661a)" opacity=".55"/>
+          <rect x="512" y="114" width="16" height="16" rx="2" fill="var(--art-blue,#1f5fbf)" opacity=".45"/>
+          <rect x="532" y="134" width="16" height="16" rx="2" fill="var(--art-accent,#e2661a)" opacity=".72"/>
+          <rect x="552" y="154" width="16" height="16" rx="2" fill="var(--art-blue,#1f5fbf)" opacity=".55"/>
+          <rect x="572" y="174" width="16" height="16" rx="2" fill="var(--art-accent,#e2661a)" opacity=".35"/>
+          <rect x="532" y="94" width="16" height="16" rx="2" fill="var(--art-blue,#1f5fbf)" opacity=".18"/>
+          <rect x="492" y="154" width="16" height="16" rx="2" fill="var(--art-accent,#e2661a)" opacity=".22"/>
+          <path class="hero-scan" d="M472 132h116"/>
+        </g>
+
+        <!-- Neural graph -->
+        <g aria-hidden="true">
+          <path class="hero-edge" d="M357 214 415 242 472 226 536 234M357 214l65 72m-83-3 76-41m-76 41 83 3m-69 17 62-61m-62 61 69-17m-78 141 71-48m-71 48 79 2m-79 2 71-50m0-137 57-16m-57 16 57 75m-57-75 64 140m-57-99 57 33m-57 81 57-31m0-123 64 83m-64-22 71 63m-71 63 71-39"/>
+          <circle class="hero-node hero-node-alt" cx="357" cy="214" r="5"/>
+          <circle class="hero-node" cx="339" cy="283" r="5.5" style="animation-delay:-1s"/>
+          <circle class="hero-node hero-node-alt" cx="353" cy="303" r="4" style="animation-delay:-2s"/>
+          <circle class="hero-node" cx="344" cy="427" r="5" style="animation-delay:-3s"/>
+          <circle class="hero-node hero-node-alt" cx="344" cy="429" r="2.1" opacity=".9"/>
+          <circle class="hero-node" cx="415" cy="242" r="6" style="animation-delay:-4s"/>
+          <circle class="hero-node hero-node-alt" cx="422" cy="286" r="4.5" style="animation-delay:-5s"/>
+          <circle class="hero-node" cx="415" cy="379" r="5.5" style="animation-delay:-2.5s"/>
+          <circle class="hero-node hero-node-alt" cx="423" cy="429" r="4" style="animation-delay:-6s"/>
+          <circle class="hero-node" cx="472" cy="226" r="5" style="animation-delay:-3.5s"/>
+          <circle class="hero-node hero-node-alt" cx="472" cy="317" r="5.5" style="animation-delay:-1.7s"/>
+          <circle class="hero-node" cx="472" cy="408" r="5" style="animation-delay:-5.2s"/>
+          <circle class="hero-node hero-node-alt" cx="536" cy="234" r="6" style="animation-delay:-.8s"/>
+          <circle class="hero-node" cx="541" cy="317" r="5" style="animation-delay:-4.4s"/>
+          <circle class="hero-node hero-node-alt" cx="542" cy="382" r="6" style="animation-delay:-2.8s"/>
+          <circle class="hero-node" cx="542" cy="430" r="4.5" style="animation-delay:-6.4s"/>
+          <path class="hero-line" d="M590 226v215" opacity=".24"/>
+          <path d="M590 260h8M590 310h13M590 360h8M590 410h13" fill="none" stroke="var(--art-accent,#e2661a)" stroke-width="1.5" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </figure>
+   </div>
     <dl class="stats">
       <div><dt>Faculty &amp; researchers</dt><dd data-count="10">10</dd></div>
       <div><dt>Live demos on Hugging Face</dt><dd data-count="44">44</dd></div>
