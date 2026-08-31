@@ -262,6 +262,7 @@ const PEOPLE = [
   },
   {
     name: 'Tipok Kitkobsin',
+    rg: 'Tipok-Kitkobsin',
     orcid: '0009-0000-6783-4147',
     scopus: '59656639400',
     email: 'tipok.kit@kmutt.ac.th',
