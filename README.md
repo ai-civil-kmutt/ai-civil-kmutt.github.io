@@ -160,6 +160,12 @@ and therefore reports lower numbers. A note under the people grid states this.
 Kosit Jariyatatsakorn and Tipok Kitkobsin keep a topic label rather than a metric. Both
 are early career, and Semantic Scholar reports single-digit counts that say little.
 
+The hero tile "Citations, combined" is the sum of all ten individual profiles, 18,238 at
+the time of writing, shown rounded as 18,000+. Members co-author heavily inside the
+group, so a jointly written paper contributes its citations once per co-author and the
+sum overstates the number of distinct citations. The note under the people grid says so.
+There is no public source for a de-duplicated group total.
+
 Counts were checked in August 2026 and drift upward over time. Re-check before a major
 update.
 
