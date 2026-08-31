@@ -173,13 +173,16 @@ The site uses the KMUTT one. Confirm with him which is current.
 
 ## Featured software
 
-The software section opens with a highlighted card for TigrimOSR, linking to
-<https://tigrimosr.github.io>. Its mark lives in `assets/img/software/` and, like the
-partner logos, sits on a white plate rather than being inverted for the dark theme, since
-the artwork is dark navy.
+The software section opens with cards for projects that have their own site and mark.
+They come from the `FEATURED` array in `data.js`, so adding one is a data change, and the
+marks live in `assets/img/software/`.
 
-The card is hand-written in `index.html` rather than generated, because it is a
-deliberate one-off. TigrimOSR also appears in the ordinary `REPOS` list below it.
+Each entry carries a `plate`, which says what ground its artwork needs. Dark artwork takes
+`light`, giving it a white plate. Artwork that is already white on a dark ground takes
+`dark`. Nothing is inverted: inverting a brand mark misrepresents it.
+
+Anything featured here is left out of the `REPOS` list below, so a project does not appear
+twice on the same screen.
 
 ## Partner logos
 

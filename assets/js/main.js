@@ -177,6 +177,19 @@
     renderPubs(btn.dataset.f);
   });
 
+  /* ── featured software ─────────────────────────────────── */
+  $('#sw-features').innerHTML = FEATURED.map((f) => `
+    <a class="sw-feature" href="${f.url}" target="_blank" rel="noopener">
+      <img class="plate-${f.plate}" src="${f.logo}" alt="${f.name}" height="96" loading="lazy">
+      <div class="sw-feature-body">
+        <p>${f.desc}</p>
+        <div class="sw-feature-meta">
+          ${f.meta.map((m) => `<span class="sw-badge">${m}</span>`).join('')}
+          <span class="sw-feature-link">${f.site} &rarr;</span>
+        </div>
+      </div>
+    </a>`).join('');
+
   /* ── software ──────────────────────────────────────────── */
   $('#repo-list').innerHTML = REPOS.map((r) => `
     <a class="sw-card" href="https://github.com/Sompote/${r.name}" target="_blank" rel="noopener">

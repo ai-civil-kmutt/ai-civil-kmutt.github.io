@@ -422,10 +422,36 @@ const PUBS = [
   { y: 2003, theme: 'legacy', title: 'Strength and deformation characteristics of shredded rubber tire sand mixtures', authors: 'S. Youwai, D. T. Bergado', venue: 'Canadian Geotechnical Journal, 40(2)', type: 'Journal' }
 ];
 
+/* ── Featured software ──────────────────────────────────────
+   Projects with their own site and mark. `plate` says which
+   ground the logo artwork needs: 'light' for dark artwork,
+   'dark' for artwork that is already white on a dark ground.
+   ─────────────────────────────────────────────────────────── */
+
+const FEATURED = [
+  {
+    name: 'TigrimOSR',
+    logo: 'assets/img/software/tigrimosr.png',
+    plate: 'light',
+    url: 'https://tigrimosr.github.io',
+    site: 'tigrimosr.github.io',
+    desc: 'A native desktop AI assistant written entirely in Rust, using egui for the interface. It starts faster and uses less memory than the Python and Node.js original, and ships as one self-contained binary with no runtime to install.',
+    meta: ['Rust', 'Apache&#8209;2.0', '75 stars']
+  },
+  {
+    name: 'Tigriden',
+    logo: 'assets/img/software/tigriden.png',
+    plate: 'dark',
+    url: 'https://tigriden.github.io',
+    site: 'tigriden.github.io',
+    desc: 'A small end-to-end research workbench. Per-folder terminals for AI coding agents, change tracking with one-click rollback, and LaTeX, PDF and Markdown read as typeset pages rather than source.',
+    meta: ['Rust', 'MIT', '12 stars']
+  }
+];
+
 /* ── Software ───────────────────────────────────────────────── */
 
 const REPOS = [
-  { name: 'TigrimOSR', stars: 75, lang: 'Rust', desc: 'Native desktop AI assistant in Rust with an egui interface. One self-contained binary, no runtime to install.' },
   { name: 'DINOV3-YOLOV12', stars: 318, lang: 'Python', desc: 'DINOv3 self-supervised features plus YOLOv12 detection in one repo. Built for datasets of a few hundred labelled images.' },
   { name: 'SAM3_LoRA', stars: 254, lang: 'Python', desc: 'Fine-tune Segment Anything 3 with LoRA on image datasets. Single-GPU setup.' },
   { name: 'Tigrimos', stars: 110, lang: 'TypeScript', desc: 'Self-hosted AI workspace with chat, code execution and parallel multi-agent orchestration.' },
