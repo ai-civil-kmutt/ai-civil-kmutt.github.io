@@ -173,7 +173,7 @@ The site uses the KMUTT one. Confirm with him which is current.
 
 ## Partner logos
 
-`assets/img/partners/` holds seven supplied logos, trimmed of their borders and normalised
+`assets/img/partners/` holds eight supplied logos, trimmed of their borders and normalised
 to 160 px tall. They are shown on a white plate in both themes rather than being
 recoloured or inverted, since they are third-party trademarks and several already carry a
 white ground.
