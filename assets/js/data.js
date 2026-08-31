@@ -464,7 +464,7 @@ const FEATURED = [
     url: 'https://tigrimos.github.io',
     site: 'tigrimos.github.io',
     desc: 'A self-hosted AI desktop application. It runs agents in parallel, reaches remote agents on other machines, sandboxes what they execute, and installs skills from a marketplace. Feedback from the user becomes a new skill, so agents improve run after run. Nothing leaves your own network.',
-    meta: ['TypeScript', 'React', '110 stars']
+    meta: ['TypeScript', 'React', 'MIT', '110 stars']
   },
   {
     name: 'TigrimOSR',
