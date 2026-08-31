@@ -63,26 +63,27 @@ For a custom domain, add a `CNAME` file containing the domain and set it under S
 
 ## Hero artwork
 
-The hero picture is a pair of PNGs in `assets/img/`:
+`index.html` inlines `assets/img/hero.svg` in the hero. It shows a building frame with a
+tower crane above a ground section with soil strata, a bored pile and a tunnel bore, and
+a bridge deck on piers. Sensor points on the structure feed signals into a layered neural
+network beside an attention matrix.
 
-    hero-light.png   dark ink, for the light theme
-    hero-dark.png    light ink, for the dark theme
+It is inlined rather than linked so it can read the page colours. Strokes come from four
+hooks set on `.hero-art` in the stylesheet:
 
-It shows a building frame and tower crane over a ground section with soil strata, a
-bored pile and a tunnel bore, with a neural network drawing signals from sensor points
-on the structure.
+    --art-ink  --art-accent  --art-blue  --art-line
 
-Both are generated, not drawn by hand. `tools/render_hero.py` renders the scene with
-Pillow at 3x and downsamples with LANCZOS, then the output is resized to 1200x1050 and
-quantised to 200 colours, which takes each file from about 370 KB to about 85 KB with no
-visible banding. The script was written by the Codex CLI from a brief; re-run it to
-change the picture:
+Change those and the drawing follows, which is why one file covers both themes.
 
-    python3 tools/render_hero.py
+The animation lives in a `<style>` block inside the SVG: pulses travelling along the
+signal paths and network edges, nodes breathing, attention cells firing, the crane
+trolley running out along the jib, a scan line sweeping the strata, and the formwork
+panel rising. All of it stops under `prefers-reduced-motion`, and the static composition
+still reads in full.
 
-A raster image cannot re-theme itself, so both files ship and CSS shows one. Those
-selectors name the element as well as the class (`.hero-art img.art-dark`) because
-`.hero-art img` sets `display: block` and would otherwise win on specificity.
+An earlier version of this picture was a pair of generated PNGs with a Pillow renderer
+behind them. Raster cannot animate, so it was replaced. The renderer is in git history at
+commit `4bdc3c8` if it is ever wanted.
 
 ## Motion
 
