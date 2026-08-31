@@ -177,6 +177,11 @@ Open courses come from the `COURSES` array in `data.js` and render into the Teac
 section. Each entry carries the playlist URL plus one `sample` lecture, linked directly so
 a visitor can start watching without committing to a series.
 
+A course may carry a `thumb`. The play badge sits in a corner rather than the middle,
+because these frames already carry the course title and a centred badge lands on top of
+it. Note that the Winter 2026 frame shows a lecture room with students in it. It is taken
+from the group's own public video, but if anyone objects, swap the file for a slide.
+
 Individual lecture titles are not listed. YouTube does not serve playlist contents to
 automated requests, so they would have to be typed by hand and would drift as the course
 grows.

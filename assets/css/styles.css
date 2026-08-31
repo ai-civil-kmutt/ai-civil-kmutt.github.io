@@ -520,6 +520,23 @@ img { max-width: 100%; }
   background: color-mix(in srgb, #ff0033 8%, transparent);
   border: 1px solid color-mix(in srgb, #ff0033 20%, transparent);
 }
+/* Thumbnail sits where the play badge would, with the badge over it. */
+.course-thumb {
+  position: relative; flex: none; width: 268px; aspect-ratio: 16 / 9;
+  border-radius: 10px; overflow: hidden; border: 1px solid var(--line);
+}
+.course-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Corner, not centre: the frame already carries the course title, and a
+   centred badge lands straight on top of it. */
+.course-play {
+  position: absolute; right: 8px; bottom: 8px;
+  display: grid; place-items: center; color: #fff;
+  background: rgba(8, 11, 18, .62); border-radius: 7px; padding: 2px 5px;
+  transition: background .2s;
+}
+.course-play svg { width: 22px; height: 22px; }
+.course:hover .course-play { background: #ff0033; }
+
 .course-body { min-width: 0; }
 .course-top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: .25rem; }
 .course-top h3 { font-size: 1.3rem; }
@@ -535,8 +552,9 @@ img { max-width: 100%; }
 .course-sample { font-size: .87rem; font-weight: 500; text-decoration: none; color: var(--ink-2); }
 .course-sample:hover { color: var(--accent-ink); }
 
-@media (max-width: 620px) {
-  .course { flex-direction: column; gap: 16px; padding: 22px; }
+@media (max-width: 780px) {
+  .course { flex-direction: column; gap: 18px; padding: 22px; }
+  .course-thumb { width: 100%; }
 }
 
 /* ── partners ─────────────────────────────────────────────── */

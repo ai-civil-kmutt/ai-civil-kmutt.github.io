@@ -433,6 +433,7 @@ const COURSES = [
     term: 'Winter 2026',
     channel: 'Civil Engineering Online Course',
     url: 'https://www.youtube.com/playlist?list=PL44jd2bsjPZaWepZSwxxsZQnkFjwejirf',
+    thumb: 'assets/img/software/course-ai-winter2026.jpg',
     desc: 'A recorded lecture series on putting machine learning to work on engineering problems, following the same ground the group publishes on. Free to watch, no enrolment.',
     sample: { label: 'Explainable AI', url: 'https://youtu.be/pm9BT2v4KXQ' }
   }

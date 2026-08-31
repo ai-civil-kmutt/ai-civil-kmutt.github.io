@@ -182,7 +182,9 @@
 
   $('#course-list').innerHTML = COURSES.map((c) => `
     <article class="course reveal">
-      <div class="course-icon" aria-hidden="true">${PLAY}</div>
+      ${c.thumb
+        ? `<div class="course-thumb"><img src="${c.thumb}" alt="" width="640" height="360" loading="lazy"><span class="course-play" aria-hidden="true">${PLAY}</span></div>`
+        : `<div class="course-icon" aria-hidden="true">${PLAY}</div>`}
       <div class="course-body">
         <div class="course-top">
           <h3>${c.title}</h3>
