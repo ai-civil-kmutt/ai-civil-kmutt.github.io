@@ -177,11 +177,15 @@ The footer states this date. Re-check the counts before a major update.
 
 ## Email addresses — please verify before publishing
 
-KMUTT uses the pattern `firstname.<first three letters of surname>@kmutt.ac.th`.
+KMUTT mostly uses `firstname.<first three letters of surname>@kmutt.ac.th`, but not
+always: Peerasit Mahasuwanchai is `peerasit.mahasu@kmutt.ac.th`, six letters rather than
+three. Treat any address that has not been checked against a KIRIM profile as a guess.
 
 **Confirmed** against KMUTT KIRIM profile pages:
 
 - `sompote.you@kmutt.ac.th` — Sompote Youwai
+- `chainarong.ath@kmutt.ac.th` — Chainarong Athisakul
+- `peerasit.mahasu@kmutt.ac.th` — Peerasit Mahasuwanchai
 - `pornkasem.jon@kmutt.ac.th` — Pornkasem Jongpradist
 - `warat.kon@kmutt.ac.th` — Warat Kongkitkul
 - `sutat.lee@kmutt.ac.th` — Sutat Leelataviwat

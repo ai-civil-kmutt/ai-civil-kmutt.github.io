@@ -57,8 +57,8 @@ const THEMES = [
     short: 'Geophysics & NDT',
     n: '07',
     title: 'Geophysics and non-destructive testing',
-    body: 'Faster ground models from surface measurements. We invert Rayleigh dispersion curves for shear-wave velocity profiles, predict critical pavement strains straight from falling weight deflectometer data without backcalculation, and fuse multi-view ground penetrating radar to find cavities.',
-    tags: ['MASW / SASW', 'FWD', 'GPR']
+    body: 'Faster models from surface measurements. We invert Rayleigh dispersion curves for shear-wave velocity profiles, predict critical pavement strains straight from falling weight deflectometer data without backcalculation, and fuse multi-view ground penetrating radar to find cavities. Terrestrial laser scanning extends the same idea above ground, to pagodas, masonry and tunnel linings.',
+    tags: ['MASW / SASW', 'FWD', 'GPR', 'Laser scanning']
   },
   {
     id: 'safety',
@@ -198,6 +198,36 @@ const PEOPLE = [
     metric: '100+ citations &middot; h-index 6',
     links: [
       { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Chanchai-Petpongpan-2' }
+    ]
+  },
+  {
+    name: 'Assoc. Prof. Dr. Chainarong Athisakul',
+    orcid: '0000-0003-0809-9167',
+    photo: 'assets/img/people/chainarong-athisakul.jpg',
+    email: 'chainarong.ath@kmutt.ac.th',
+    emailVerified: true,
+    role: 'Principal Investigator',
+    division: 'Structural Engineering',
+    note: 'Director, M.Eng. Civil Engineering Technology',
+    bio: 'Structural mechanics, offshore and cable structures, and structural health monitoring. Brings terrestrial laser scanning into the group as a measurement channel, from historic pagodas to tunnel deformation during construction.',
+    metric: '490+ citations &middot; h-index 13',
+    links: [
+      { label: 'Scholar', url: 'https://scholar.google.com/citations?user=z60ETHUAAAAJ' },
+      { label: 'KIRIM', url: 'https://kirim.kmutt.ac.th/converis/portal/detail/Person/54234188?lang=en_GB' }
+    ]
+  },
+  {
+    name: 'Dr. Peerasit Mahasuwanchai',
+    orcid: '0000-0002-0702-0712',
+    photo: 'assets/img/people/peerasit-mahasuwanchai.jpg',
+    email: 'peerasit.mahasu@kmutt.ac.th',
+    emailVerified: true,
+    role: 'Principal Investigator',
+    division: 'Structural Engineering',
+    bio: 'Heritage structures and long-term monitoring. Combines terrestrial laser scanning with nonlinear finite element models to track movement in Thai historic pagodas and masonry, and to assess their seismic performance.',
+    metric: 'Heritage structures &amp; laser scanning',
+    links: [
+      { label: 'KIRIM', url: 'https://kirim.kmutt.ac.th/converis/portal/detail/Person/1448805615?lang=en_GB' }
     ]
   },
   {
