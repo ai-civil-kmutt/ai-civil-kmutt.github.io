@@ -470,7 +470,9 @@ img { max-width: 100%; }
 .foot-inner { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
 .foot-left { display: flex; flex-direction: column; gap: 4px; }
 .foot p { margin: 0; font-size: .85rem; color: var(--ink-3); }
-.foot-note { font-size: .8rem !important; }
+.foot-note { font-size: .8rem !important; max-width: 62ch; }
+.foot-note a { color: var(--ink-2); text-decoration-color: var(--line-2); }
+.foot-note a:hover { color: var(--accent-ink); }
 
 .foot-support { font-size: .82rem !important; color: var(--ink-3); }
 .foot-support a {
