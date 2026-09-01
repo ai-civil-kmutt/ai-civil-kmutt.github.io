@@ -17,7 +17,8 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 HTML = ROOT / "index.html"
 ASSETS = ["assets/css/styles.css", "assets/js/analytics.js",
-          "assets/js/data.js", "assets/js/main.js"]
+          "assets/js/data.js", "assets/js/main.js",
+          "assets/img/favicon.png", "assets/img/og.png"]
 
 html = HTML.read_text()
 changed = []
