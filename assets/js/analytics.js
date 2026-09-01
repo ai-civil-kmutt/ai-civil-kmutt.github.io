@@ -56,7 +56,13 @@
 
   // TOTAL is GoatCounter's reserved path for the whole site.
   // count_unique is visitors; count is pageviews.
-  fetch(BASE + '/counter/TOTAL.json')
+  //
+  // Without a start date the endpoint counts today only, so the
+  // footer sat at 1. START predates the site, which makes the
+  // range the whole history.
+  var START = '2020-01-01';
+
+  fetch(BASE + '/counter/TOTAL.json?start=' + START)
     .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
     .then(function (d) {
       var n = d.count_unique || d.count;
