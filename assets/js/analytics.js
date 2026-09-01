@@ -5,9 +5,11 @@
    at https://airesearchgroup.goatcounter.com has the code
    "airesearchgroup".
 
-   The footer count needs one setting turned on, under
-   https://airesearchgroup.goatcounter.com/settings/main ->
-   "Allow using the visitor counter". Without it the /counter/
+   The footer count needs one setting turned on, at
+   https://airesearchgroup.goatcounter.com/settings/main under
+   the "Site settings" heading: the checkbox "Allow adding
+   visitor counts on your website", just below the "Your site"
+   field. Save the form afterwards. Without it the /counter/
    endpoint returns 403 and the footer stays as it is. Pageview
    tracking works either way.
 
