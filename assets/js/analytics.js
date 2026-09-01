@@ -1,40 +1,66 @@
 /* ─────────────────────────────────────────────────────────────
-   Google Analytics 4
+   GoatCounter — pageview tracking and the footer visitor count
 
-   Put the property's Measurement ID in MEASUREMENT_ID below. It
-   looks like G-XXXXXXXXXX and is found under
-   Admin -> Data streams -> your web stream.
+   SITE_CODE below is the goatcounter.com subdomain, so the site
+   at https://airesearchgroup.goatcounter.com has the code
+   "airesearchgroup".
 
-   Until a valid id is set, nothing loads: no request to Google,
-   no cookies, no consent question to answer. The guard also skips
+   The footer count needs one setting turned on, under
+   https://airesearchgroup.goatcounter.com/settings/main ->
+   "Allow using the visitor counter". Without it the /counter/
+   endpoint returns 403 and the footer stays as it is. Pageview
+   tracking works either way.
+
+   Until a valid code is set, nothing loads: no request to
+   GoatCounter and no counter in the footer. The guard also skips
    local development, so testing does not pollute the statistics.
+
+   GoatCounter sets no cookies and stores no IP addresses.
    ───────────────────────────────────────────────────────────── */
 (function () {
   'use strict';
 
-  var MEASUREMENT_ID = '';
+  var SITE_CODE = 'airesearchgroup';
 
-  // A malformed or absent id would silently send data nowhere, so
-  // check the shape rather than merely checking for a value.
-  if (!/^G-[A-Z0-9]{6,}$/.test(MEASUREMENT_ID)) return;
+  // A malformed or absent code would silently send data nowhere,
+  // so check the shape rather than merely checking for a value.
+  if (!/^[a-z0-9][a-z0-9-]{1,48}[a-z0-9]$/.test(SITE_CODE)) return;
 
   var host = location.hostname;
   if (host === 'localhost' || host === '127.0.0.1' || host === '' || host.endsWith('.local')) return;
 
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { window.dataLayer.push(arguments); }
-  window.gtag = gtag;
+  var BASE = 'https://' + SITE_CODE + '.goatcounter.com';
 
-  gtag('js', new Date());
-  gtag('config', MEASUREMENT_ID, {
-    anonymize_ip: true,
-    // The site sets no advertising cookies and runs no ad features.
-    allow_google_signals: false,
-    allow_ad_personalization_signals: false
-  });
+  /* ── record this pageview ────────────────────────────────── */
 
   var s = document.createElement('script');
   s.async = true;
-  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(MEASUREMENT_ID);
+  s.setAttribute('data-goatcounter', BASE + '/count');
+  s.src = 'https://gc.zgo.at/count.js';
   document.head.appendChild(s);
+
+  /* ── show the running total in the footer ────────────────── */
+
+  // The count only appears once a number arrives. A blocked or
+  // failing request leaves the footer exactly as it was rather
+  // than showing a broken or zero figure.
+  function show(text) {
+    var box = document.getElementById('visits');
+    var out = document.getElementById('visits-n');
+    if (!box || !out) return;
+    out.textContent = text;
+    box.hidden = false;
+  }
+
+  // TOTAL is GoatCounter's reserved path for the whole site.
+  // count_unique is visitors; count is pageviews.
+  fetch(BASE + '/counter/TOTAL.json')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (d) {
+      var n = d.count_unique || d.count;
+      // The API formats the number already, e.g. "12,481". Keep
+      // only what a formatted count can contain.
+      if (typeof n === 'string' && /^[0-9][0-9,. ]*$/.test(n)) show(n);
+    })
+    .catch(function () { /* leave the footer unchanged */ });
 })();

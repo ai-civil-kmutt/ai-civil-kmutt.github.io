@@ -622,6 +622,18 @@ img { max-width: 100%; }
 .foot-note a { color: var(--ink-2); text-decoration-color: var(--line-2); }
 .foot-note a:hover { color: var(--accent-ink); }
 
+/* — visitor count: hidden until a number arrives (see analytics.js) — */
+.foot-right { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.foot-right[hidden] { display: none; }
+.visits-label {
+  font-size: .7rem !important; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-3) !important;
+}
+.visits-n {
+  font-family: var(--mono); font-size: 1.15rem !important; font-weight: 500;
+  color: var(--ink) !important; font-variant-numeric: tabular-nums; line-height: 1.1;
+}
+
 
 /* ── reveal on scroll ─────────────────────────────────────── */
 
