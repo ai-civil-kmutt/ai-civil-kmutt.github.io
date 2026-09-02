@@ -97,7 +97,7 @@ const LEAD = {
   phone: '+66 2470 9141',
   photo: 'assets/img/people/sompote-youwai.jpg',
   orcid: '0009-0002-9878-8504',
-  bio: 'Sompote Youwai leads the group. His work moves along three connected paradigms: deep learning for prediction, computer vision for infrastructure monitoring, and agentic AI for design orchestration. Earlier work on rubber tyre&ndash;sand mixtures and reinforced embankments remains widely cited. He publishes the code and the weights for almost everything the group produces.',
+  bio: 'Sompote Youwai leads the group. His work moves along three connected paradigms: deep learning for prediction, computer vision for infrastructure monitoring, and agentic AI for design orchestration. He publishes the code and the weights for almost everything the group produces.',
   metrics: [
     { k: 'Citations', v: '1,943' },
     { k: 'h-index', v: '19' },
